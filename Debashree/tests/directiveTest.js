@@ -1,20 +1,23 @@
-describe("Directive Test for ", function() {
+describe("Directive Testing for ", function() {
   describe("Pi directive", function() {
-    var compile, scope, directiveElem, chart2;
+    var compile, scope, directiveElem,httpBackend,interval;
     beforeEach(function() {
       module('graphApp');
-      inject(function($compile, $rootScope, $interval) {
+      inject(function($compile, $rootScope, $interval,$httpBackend) {
         compile = $compile;
         scope = $rootScope.$new();
         interval = $interval;
+        httpBackend = $httpBackend;
         scope.pie = {
           prop: 'value'
         };
       });
+      httpBackend.whenGET('app/views/graph.html').respond();
       directiveElem = getCompiledElement();
     });
     it('checks that pie on isolated scope should be two-way bound and scope functions called', function() {
       var isolatedScope = directiveElem.isolateScope();
+      isolatedScope.showRevenue()
       isolatedScope.pie.prop = "value1";
       expect(scope.pie.prop).toEqual('value1');
     });
@@ -28,6 +31,7 @@ describe("Directive Test for ", function() {
 
   describe("Graph directive", function() {
     var compile, scope, interval, directiveElem;
+      var c;
     beforeEach(function() {
       module('graphApp');
       inject(function($compile, $rootScope, $interval) {
@@ -43,7 +47,7 @@ describe("Directive Test for ", function() {
       });
       directiveElem = getCompiledElement();
     });
-
+     
     it('checks that charttype on isolated scope should be two-way bound', function() {
       var isolatedScope = directiveElem.isolateScope();
       isolatedScope.selectChart();
@@ -98,6 +102,12 @@ describe("Directive Test for ", function() {
     it('checks function setSelectedItem have been called', function() {
       var isolatedScope = directiveElem.isolateScope();
       isolatedScope.setSelectedItem(scope.option);
+        scope.option = {
+          checked: false,
+          name: 'Hayyat'
+        };
+        isolatedScope.checkAll = false;
+        isolatedScope.setSelectedItem(scope.option);
     });
 
     function getCompiledElement() {

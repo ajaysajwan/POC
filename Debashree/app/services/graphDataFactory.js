@@ -1,7 +1,7 @@
-myApp.factory('dataFetch', ['$http',function($http) {
-     return{        
-        getAllHotels: function(){
-            return $http.get('../assets/json/graphData.json');
-        }
+myApp.factory('dataFetch', ['$http', function($http) {
+  return {
+    getAllHotels: function() {
+      return $http.get('../assets/json/graphData.json');
     }
+  }
 }]);

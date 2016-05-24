@@ -1,29 +1,25 @@
 <div class="container-fluid background">
-    <div class="row">
-        <div class="col-md-7">
-            <h5>Select Hotels:</h5>
-            <dropdown-multiselect class="display-button" dropdown-title="{{selected_items.length}}" check-all="checkAll" total-option="{{dropdownOptions.length}}" model="selected_items" options="dropdownOptions"></dropdown-multiselect>
-    
-            <button type="button" ng-click="getData()" class="btn btn-primary float-button">Get Data</button>
-    
-             <h5>Select ChartType:</h5>
-    
-            <graph-nv  height="464px" data="data" initial="initial" chart-type="chartType" callback="graphOnClick()" show-table="showTable()" table-data="showTableData"></graph-nv>
-        </div>
-        <div class="col-md-5" id="pie-chart">
-            <pie-chart show-text ="showText" key="{{name}}" pie="data2"></pie-chart>  
-        </div>
+  <div class="row">
+    <div class="col-md-7">
+      <h5>Select Hotels:</h5>
+      <dropdown-multiselect class="display-button" dropdown-title="{{selected_items.length}}" check-all="checkAll" total-option="{{dropdownOptions.length}}" model="selected_items" options="dropdownOptions"></dropdown-multiselect>
+
+      <button type="button" ng-click="getData()" class="btn btn-primary float-button">Get Data</button>
+      <h5>Select ChartType:</h5>
+
+      <graph-nv height="464px" data="data" initial="initial" chart-type="chartType" callback="graphOnClick()" show-table="showTable()" table-data="showTableData"></graph-nv>
     </div>
+    <div class="col-md-5" id="pie-chart">
+      <pie-chart show-text="showText" key="{{name}}" pie="data2"></pie-chart>
+    </div>
+  </div>
   <div ng-if="showTableData" ng-repeat="step in data track by $index" class="table-width section-width  display-inline">
     <div class="align-item">
-      <h3 ng-style ="{'color':step.color}">{{step.key}}</h3>
+      <h3 ng-style="{'color':step.color}">{{step.key}}</h3>
     </div>
-    <div class ="align-item" ng-repeat="data1 in step.values track by $index">
+    <div class="align-item" ng-repeat="data1 in step.values track by $index">
       <div class="col-sm-3">{{data1.label}}</div>
-      <div style="margin-bottom:15px"; class="col-sm-9"><input type="text" ng-model="data1.y"></div>
+      <div style="margin-bottom:15px" ; class="col-sm-9"><input type="text" ng-model="data1.y"></div>
     </div>
   </div>
 </div>
-
-    
-

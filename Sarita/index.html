@@ -18,7 +18,8 @@
     </div>
     <div class="panel-body">
     <h4><strong>Purpose -</strong></p>
-    <span>Make angular google chart of monthly sales in percentage and their customization.</span>
+    <span>Make angular google chart of monthly sales in percentage which will show all the profit and loss in respective months and their customization.Angular-Google-Chart is a 
+    directive Module for Google Chart in Angular JS.</span>
     <h4><strong>1) External Libraries used -</strong></h4>
     <ol>
     <li><a href="https://www.google.com/jsapi" title="go to link">https://www.google.com/jsapi</a></li>
@@ -92,6 +93,15 @@ $scope.chartData = chartdata; // copy of data into array chartData.
 Created one constructor of google.visualization.Datatable() inside link function. It represents a two-dimensional, mutable table of values in which each column is assigned a data type, several optional properties including an ID, label, and pattern string.
 </span><p></p>
 <p><code>var data = new google.visualization.DataTable();</code></p>
+<span>It represents a two-dimensional, mutable table of values in which each column is assigned a data type, 
+several optional properties including an ID, label, and pattern string.</span>
+<span><strong>Add columns for the chart</strong></span>
+<p><code>data.addColumn('string', 'label');</code></p>
+<p><code>data.addColumn('number', 'Min');</code></p>
+<p><code>data.addColumn('number', 'Max');</code></p>
+<span>Add rows to the Datatable with the data coming from JSON</span>
+<p><code>data.addRow([label, stack1, stack2, stack3]);</code></p>
+<span>stacks are the min , max and average profit.</span>
 <p class="indent">$watch has been added to watch and refresh the chart when data , width , height etc get changed.</p>
 <p><strong>Types of Charts : </strong></p>
 <ol>

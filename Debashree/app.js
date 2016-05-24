@@ -12,5 +12,5 @@ myApp.config(['$routeProvider',
     }).
       otherwise({
         redirectTo: '/aboutNVD3'
-      });
+    });
 }]);

@@ -1,7 +1,9 @@
 ### TravelClick
 Link to my [Application](http://sarita.netlify.com)
 
-#### **Purpose -**<span>Make angular google chart of monthly sales in percentage and their customization.</span>
+I have used <a href="https://github.com/angular-google-chart/angular-google-chart" target="_blank">angular-google-chart</a> third party library.
+
+#### **Purpose -**<span>Make angular google chart of monthly sales in percentage which will show all the profit and loss in respective months and their customization.Angular-Google-Chart is a directive Module for Google Chart in Angular JS.</span>
 
 #### **1) External Libraries used -**
 
@@ -31,6 +33,20 @@ Link to my [Application](http://sarita.netlify.com)
 <span>Created custom directives of type “EA” for all the charts with isolated scopes. Created one constructor of google.visualization.Datatable() inside link function. It represents a two-dimensional, mutable table of values in which each column is assigned a data type, several optional properties including an ID, label, and pattern string.</span>
 
 `var data = new google.visualization.DataTable();`
+
+<span>It represents a two-dimensional, mutable table of values in which each column is assigned a data type, several optional properties including an ID, label, and pattern string.</span> <span>**Add columns for the chart**</span>
+
+`data.addColumn('string', 'label');`
+
+`data.addColumn('number', 'Min');`
+
+`data.addColumn('number', 'Max');`
+
+<span>Add rows to the Datatable with the data coming from JSON</span>
+
+`data.addRow([label, stack1, stack2, stack3]);`
+
+<span>stacks are the min , max and average profit.</span>
 
 $watch has been added to watch and refresh the chart when data , width , height etc get changed.
 

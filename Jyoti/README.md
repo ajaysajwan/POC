@@ -1,6 +1,8 @@
 
 ## Angular D3 Charts
 Link to my [Application](http://jyoti.netlify.com)
+Library Used for Charts : I have used D3 JS, D3 (Data Driven Documents) is an open source library (https://d3js.org/d3.v3.min.js)
+
 ### Implementation Details
 
 *   Created following custom directives for different charts:
@@ -9,11 +11,11 @@ Link to my [Application](http://jyoti.netlify.com)
     *   d3TransposeBar
     *   d3StackedBar
 *   Main focus is to create **Overlapping Area Chart** as per provided mock up
-*   Prepared data and created json file containging data **price vs stock** to display chart as per mock up
+*   Prepared data and created json file containing data **price vs stock** to display chart as per mock up
 *   Created controller and services to share data
 *   Created factory function for ajax call and retrieving data
-*   Using **link function** inside custom directive created charts
-*   #### Steps to create Area chart
+*   Used **link function** inside custom directive to create charts
+*   Steps to create Area chart
 
     *   Define width, height, margin, padding etc for container
     *   Create **SVG container** and set width height etc defined attributes on svg.
@@ -35,20 +37,41 @@ Link to my [Application](http://jyoti.netlify.com)
 
 *   **Following scripts are included in index file.**
 
-    <p>**D3 JS Library file:** <xmp><script src="node_modules/d3/d3.v3.min.js"></script></xmp></p>
+    **D3 JS Library file:** 
+	```javascript
+	<script src="node_modules/d3/d3.v3.min.js"></script>
+	```
+    **Service to get chart data:** 
+	```javascript
+	<script src="charts/js/services/commonService.js"></script>
+	```
+    **Directive scripts for different charts :** 
+	```javascript
+	<script src="charts/js/directives/d3AreaChart.js"></script> 
+	<script src="charts/js/directives/d3LineChart.js"></script> 
+	<script src="charts/js/directives/d3BarChart.js"></script>
+```
+    **Controller file :**
+	```javascript
+	<script src="charts/js/mainController.js"></script>
+```
+*   **Template file for Directives** : 
+**charts/partials/reports.html** These directives are used for different charts :**
+```html
+      <d3-area symbols="symbols" chartData="chartData" settings="settings"></d3-area> 
+	  <d3-line symbols="symbols" chartData="chartData" settings="settings"></d3-line> 
+	  <d3-transpose-bar symbols="symbols" chartData="chartData" settings="settings"></d3-transpose-bar>
+	  <d3-stacked-bar symbols="symbols" chartData="chartData" settings="settings"></d3-stacked-bar>
+```
+*   d3Chart.js file contains all custom directives for charts. There are different types of directives are created for Overlapping area chart, Line chart, Bar chart, staked bar chart etc. Directive uses shared scope so Colors and chartData are used in directive and created in controller scope. Path to directive: 
+```html
+charts/js/directives/d3Chart.js**
+```
+*   Controller file provides data and other options required to plot chart. It contains function “UpdateChart() which update chart on changing data. Controller calls service to get json data. Path to controller: charts/js/mainController.js I have provided select drop down to filter data. On the basis of selection, UpdateChart() function gets called in controller and on changing data graph updates accordingly.
 
-    <p>**Service to get chart data:** <xmp><script src="charts/js/services/commonService.js"></script></xmp></p>
-
-    <p>**Directive files for different charts :** <xmp><script src="charts/js/directives/d3AreaChart.js"></script> <script src="charts/js/directives/d3LineChart.js"></script> <script src="charts/js/directives/d3BarChart.js"></script></xmp></p>
-
-    <p>**Controller file :**<xmp><script src="charts/js/mainController.js"></script></xmp></p>
-
-*   **Template file for Directives** : **charts/partials/reports.html** These directives are used for different charts - <xmp><d3-area symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-area> <d3-line symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-line> <d3-transpose-bar symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-transpose-bar> <d3-stacked-bar symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-stacked-bar></xmp>
-*   d3Chart.js file contains all custom directives for charts. There are different types of directives are created for Overlapping area chart, Line chart, Bar chart, staked bar chart etc. Directive uses shared scope so Colors and chartData are used in directive and created in controller scope. Path to directive: **charts/js/directives/d3Chart.js**
-
-*   Controller file provides data and other options required to plot chart. It contains function “UpdateChart() which update chart on changing data. Controller calls service to get json data. Path to controller: charts/js/mainController.js We have provide select drop down to filter data. On the basis of selection, UpdateChart() function gets called in controller and on changing data graph updates .
-
-*   Factory is used to get Ajax data. It collects data from json file located at “charts/data/stocks.json” and return data to controller. Path to factory: charts/js/services/commonService.js Sample data format :
-
-    <xmp>[ { "symbol" : "MSFT", "date" : "Jan 2014", "price" : "16.81" } ]</xmp>
+*   Factory is used to get Ajax data. It collects data from json file located at “charts/data/stocks.json” and return data to controller. Path to factory: charts/js/services/commonService.js Sample
+ data format :
+```javascript
+    [ { "symbol" : "MSFT", "date" : "Jan 2014", "price" : "16.81" } ]
+```	
 *   All Unit test cases are written in Spec folder at root

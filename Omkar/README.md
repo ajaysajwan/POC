@@ -1,5 +1,6 @@
 ## About the POC of charts
 Link to my [Application] ( http://omkar.netlify.com/ )
+Library Used : Angular google charts (ng-google-chart.min.js) (installed with npm)
 #### Angular Google Chart
 
 I have made a POC using Angular Google Charts. Where I am showing graphical representation of website visitors count across the world. The charts mainly focus on distribution of data across the main continents like asia, oceania, europe etc. for the year 2015
@@ -16,9 +17,7 @@ I have made a POC using Angular Google Charts. Where I am showing graphical repr
 *   The fourth chart (bottom right) is a Pie chart has two filters of month and region. It will show the data for sub regions of selected regions (in %) for the selected month of 2015
 *   I have created a json file as a data source with random values
 
-[View Charts](#/home)</div>
 
-<div class="row integration-steps">
 
 ## Angular Google Charts : Integration Steps
 
@@ -26,7 +25,7 @@ Google Charts API is a full-featured JavaScript chart library, available for fre
 **Below are the integration steps for Angular Google Charts**
 
 ### Step 1: Install
-
+After installing all required libraries to your index page like angular.js, 
 You can install it using NPM or Bower or CDN path
 
 **NPM**  

@@ -1,5 +1,6 @@
 # About Chart POC
 Link to my [Application](http://shashikant.netlify.com)
+I have used <a href="https://github.com/chartjs/Chart.js" targat="_blank">chartjs</a> third party library.
 
 ### <u>Application Structure</u>
 

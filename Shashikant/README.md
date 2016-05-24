@@ -2,7 +2,7 @@
 
 ## Overview
 
-Application Structure
+&lt;b&gt;Application Structure&lt;/b&gt;
 I have followed the application structure which is described by John Papa https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#application-structure
 
 In this poc application, I have use chart is for creating a dashboard page. In which I have been displaying booking user data with different data distribution.

@@ -1,8 +1,3 @@
-<div ng-controller="mainController">
-
-<div class="row">
-
-<div class="col-lg-12 col-md-12 col-sm-12">
 
 ## Angular D3 Charts
 Link to my [Application](http://jyoti.netlify.com)
@@ -40,13 +35,13 @@ Link to my [Application](http://jyoti.netlify.com)
 
 *   **Following scripts are included in index file.**
 
-    <div>**D3 JS Library file:** <xmp><script src="node_modules/d3/d3.v3.min.js"></script></xmp></div>
+    <p>**D3 JS Library file:** <xmp><script src="node_modules/d3/d3.v3.min.js"></script></xmp></p>
 
-    <div>**Service to get chart data:** <xmp><script src="charts/js/services/commonService.js"></script></xmp></div>
+    <p>**Service to get chart data:** <xmp><script src="charts/js/services/commonService.js"></script></xmp></p>
 
-    <div>**Directive files for different charts :** <xmp><script src="charts/js/directives/d3AreaChart.js"></script> <script src="charts/js/directives/d3LineChart.js"></script> <script src="charts/js/directives/d3BarChart.js"></script></xmp></div>
+    <p>**Directive files for different charts :** <xmp><script src="charts/js/directives/d3AreaChart.js"></script> <script src="charts/js/directives/d3LineChart.js"></script> <script src="charts/js/directives/d3BarChart.js"></script></xmp></p>
 
-    <div>**Controller file :**<xmp><script src="charts/js/mainController.js"></script></xmp></div>
+    <p>**Controller file :**<xmp><script src="charts/js/mainController.js"></script></xmp></p>
 
 *   **Template file for Directives** : **charts/partials/reports.html** These directives are used for different charts - <xmp><d3-area symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-area> <d3-line symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-line> <d3-transpose-bar symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-transpose-bar> <d3-stacked-bar symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-stacked-bar></xmp>
 *   d3Chart.js file contains all custom directives for charts. There are different types of directives are created for Overlapping area chart, Line chart, Bar chart, staked bar chart etc. Directive uses shared scope so Colors and chartData are used in directive and created in controller scope. Path to directive: **charts/js/directives/d3Chart.js**
@@ -57,9 +52,3 @@ Link to my [Application](http://jyoti.netlify.com)
 
     <xmp>[ { "symbol" : "MSFT", "date" : "Jan 2014", "price" : "16.81" } ]</xmp>
 *   All Unit test cases are written in Spec folder at root
-
-</div>
-
-</div>
-
-</div>

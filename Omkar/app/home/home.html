@@ -1,7 +1,7 @@
  
 <div class="container" ng-controller="ChartCtrl">
         
-   <h3>Home page content</h3>
+   <h3>Website Visitors Overview</h3>
 
     <div class="row" >
 
@@ -27,16 +27,17 @@
         
          <div google-chart chart="chart1" style="{{chart1.cssStyle}}"> </div>
       <br>
-    <button ng-click="change('ColumnChart')">ColumnChart</button>
-    <button ng-click="change('BarChart')">BarChart</button>
-    <button ng-click="change('AreaChart')">AreaChart</button>
-    <button ng-click="change('PieChart')">PieChart</button>
-    <button ng-click="change('LineChart')">LineChart</button>
+    <button ng-click="change('ColumnChart')" class="btn btn-info">ColumnChart</button>
+    <button ng-click="change('AreaChart')" class="btn btn-info">AreaChart</button>
+      <button ng-click="change('SteppedAreaChart')" class="btn btn-info">SteppedAreaChart</button>
+<!--    <button ng-click="change('PieChart')">PieChart</button>-->
+    <button ng-click="change('LineChart')" class="btn btn-info">LineChart</button><br><br>
 <!--    <button ng-click="change('CandlestickChart')">CandlestickChart</button>-->
-    <button ng-click="change('SteppedAreaChart')">SteppedAreaChart</button>
-    <button ng-click="change('BubbleChart')">BubbleChart</button>
-    <button ng-click="change('ScatterChart')">ScatterChart</button>
-    <button ng-click="change('Table')">Table</button>
+      <button ng-click="change('ScatterChart')" class="btn btn-info">ScatterChart</button>
+     <button ng-click="change('BarChart')" class="btn btn-info">BarChart</button>
+    <button ng-click="change('BubbleChart')" class="btn btn-info">BubbleChart</button>
+    
+    <button ng-click="change('Table')" class="btn btn-info">Show data in <strong>Table</strong></button>
            
    </div>
   

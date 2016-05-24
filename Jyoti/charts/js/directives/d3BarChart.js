@@ -6,8 +6,7 @@
         scope:{
             symbols : "=",
             chartData : "=",
-            colors : "=",
-            opacity: "="
+            settings : "="
         },
 		link: function(scope, element, iAttrs) {
 			angular.element($window).bind('resize', function() {
@@ -18,13 +17,13 @@
 			if(scope.symbols !== undefined){
 				var data = scope.chartData;	
 				var width = angular.element(element).parent()[0].clientWidth;
-				var m = [20, 20, 30, 20],
+				var m = scope.settings.m,
 				w = width - m[1] - m[3],
 				h = 300 - m[0] - m[2];
 
-				var x,y,duration = 1500,delay = 500;
+				var x,y,duration = scope.settings.duration, delay = scope.settings.delay, opacity = scope.settings.opacity;
 
-				var colors = scope.colors;
+				var colors = scope.settings.colors;   
 				var i =0;
 				if(d3.select(element[0]).select("svg")){ 
 					d3.select(element[0]).select("svg").remove(); 
@@ -116,8 +115,7 @@
         scope:{
             symbols : "=",
             chartData : "=",
-            colors : "=",
-            opacity: "="
+            settings : "="
         },
 		link: function(scope, element, iAttrs) {
 			angular.element($window).bind('resize', function() {
@@ -126,14 +124,15 @@
 			scope.$watch('symbols', Update);
 			function Update(newSymbols) {
 			if(scope.symbols !== undefined){
+				var data = scope.chartData;	
 				var width = angular.element(element).parent()[0].clientWidth;
-				var m = [20, 20, 30, 20],
+				var m = scope.settings.m,
 				w = width - m[1] - m[3],
 				h = 300 - m[0] - m[2];
 
-				var x,y,duration = 1500,delay = 500;
+				var x,y,duration = scope.settings.duration, delay = scope.settings.delay, opacity = scope.settings.opacity;
 
-				var colors = scope.colors;
+				var colors = scope.settings.colors;   
 				var i =0;
 				if(d3.select(element[0]).select("svg")){ 
 					d3.select(element[0]).select("svg").remove(); 

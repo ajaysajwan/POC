@@ -15,27 +15,28 @@
 */
 (function () {
     'use strict';
-    angular.module('app.directive', [])
+    angular.module('app.chart', [])
 
     .directive('canvasRect', canvasRect)
-        .directive('downloadChartImage', downloadChartImage);
+    .directive('downloadChartImage', downloadChartImage);
+    
     canvasRect.$inject = ['$interval'];
 
     function canvasRect($interval) {
         return {
-            restrict: 'A'
-            , scope: {
+            restrict: 'A', 
+            scope: {
                 options: '='
-            }
-            , link: link
+            }, 
+            link: link
         };
 
         function link($scope, $elem, $attrs) {
-            var canvas = document.getElementById("myCanvas");
-            var context = canvas.getContext('2d');
-
-            var tipCanvas = document.getElementById("tip");
-            var tipCtx = tipCanvas.getContext("2d");
+            var canvas = document.getElementById("myCanvas"),
+            context = canvas.getContext('2d'),
+            
+            tipCanvas = document.getElementById("tip"),
+            tipCtx = tipCanvas.getContext("2d");
 
 
             var amount = 0;

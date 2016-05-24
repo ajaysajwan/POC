@@ -8,6 +8,7 @@ In this, we are inject multiple module which is created based on Feature of proj
     angular.module('chartsApp', [
         /* Feature modules */
         'app.config',
-        'app.dashboard'
+        'app.dashboard',
+        'app.home'
     ]);
 })();

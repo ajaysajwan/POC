@@ -24,7 +24,8 @@ module.exports = function(config) {
         "app/header/headerController.js",
         "app/home/chartService.js",
         "app/home/homeBarController.js",
-        "app/home/spec/chartServiceSpec.js"
+        "app/home/spec/chartServiceSpec.js",
+        "app/home/spec/homeBarControllerSpec.js"
     ],
 
 

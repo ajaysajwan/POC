@@ -82,7 +82,8 @@ $http.get('js/data.json').success(function(response){
 		$scope.data = response;
 }
 for(i=0;i<$scope.data.length;i++){
-	chartdata.push([{ c: [{ v: $scope.data[i].month}, {v:$scope.data[i].value1},{v:$scope.data[i].value2},{v:$scope.data[i].value3}]}]);
+	chartdata.push([{ c: [{ v: $scope.data[i].month}, {v:$scope.data[i].value1},{v:$scope.data[i].value2},
+	{v:$scope.data[i].value3}]}]);
 }
 $scope.chartData = chartdata; // copy of data into array chartData.
 </xmp>

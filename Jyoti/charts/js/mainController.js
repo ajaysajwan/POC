@@ -2,8 +2,16 @@ mainApp.controller('mainController',['$scope','$http','chartFactory',function($s
 
 	$scope.sellerOptions = ['ALL','MSFT','AMZN'];
 	$scope.selectedSeller = $scope.sellerOptions[0]; //This sets the default value of the select in the ui 
-	$scope.colors = {'AMZN':'#BCD862','MSFT':'#A1C0CA'};
-	$scope.opacity = {'AMZN':1,'MSFT':0.5};
+//	$scope.colors = {'AMZN':'#BCD862','MSFT':'#A1C0CA'};
+//	$scope.opacity = {'AMZN':1,'MSFT':0.5};
+    $scope.settings = {
+        height : 250,
+        m : [20, 20, 30, 20],
+        delay: 200,
+        duration: 200,
+        opacity: {'AMZN':1,'MSFT':0.5},
+        colors : {'AMZN':'#BCD862','MSFT':'#A1C0CA'}
+    }
 	/** call back function for ajax response **/
 	$scope.chartSuccess = function(resData){            
 		var data = resData; 

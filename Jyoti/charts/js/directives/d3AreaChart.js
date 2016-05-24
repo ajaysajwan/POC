@@ -7,8 +7,7 @@
         scope:{
             symbols : "=",
             chartData : "=",
-            colors : "=",
-            opacity: "="
+            settings : "="
         },
 		link: function(scope, iElement, iAttrs) {
 			angular.element($window).bind('resize', function() {
@@ -19,13 +18,13 @@
                 if(scope.symbols !== undefined){
 					var data = scope.chartData;	
 					var width = angular.element(iElement).parent()[0].clientWidth;
-					var m = [20, 20, 30, 20],
+					var m = scope.settings.m,
 					w = width - m[1] - m[3],
-					h = 250 - m[0] - m[2];
+					h = scope.settings.height - m[0] - m[2];
 
-					var x,y,duration = 200,delay = 200;
+					var x,y,duration = scope.settings.duration, delay = scope.settings.delay, opacity = scope.settings.opacity;
 
-					var colors = scope.colors;
+					var colors = scope.settings.colors;
 					if(d3.select(iElement[0]).select("svg")){ 
 						d3.select(iElement[0]).select("svg").remove(); 
 					}
@@ -119,7 +118,7 @@
 						});
 						  
 						g.select(".area")
-						  .style("fill-opacity", function(d) { return scope.opacity[d.key]; })
+						  .style("fill-opacity", function(d) { return opacity[d.key]; })
 						  .style("fill", function(d, i) { return colors[d.key]; })
 						  .attr("d", function(d) { return area(d.values); });		
 						  

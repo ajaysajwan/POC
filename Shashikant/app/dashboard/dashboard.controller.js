@@ -1,7 +1,7 @@
 /* dashboard.controller.js */
 (function () {
     'use strict';
-    angular.module('app.dashboard', ['app.config', 'tc.chartjs', 'app.directive', 'dashboard.factory','ui.bootstrap'])
+    angular.module('app.dashboard', ['app.config', 'tc.chartjs', 'app.chart', 'dashboard.factory','ui.bootstrap'])
         .controller('DashboardCtrl', DashboardCtrl);
 
     DashboardCtrl.$inject = ['ChartFactory', '$log', '$interval'];
@@ -46,7 +46,8 @@
             width: 200,
             height: 30,
             increaseBy: 1,
-            interval: 8
+            interval: 8,
+            fill:0
         };
         
         
@@ -80,6 +81,7 @@
                 vm.labels = [];
                 vm.dataArr = [];
                 ChartFactory.getBookingDetails().then(function (response) {
+//                    console.log(vm.isOpen);
                     if (!vm.isOpen) {
                         vm.isOpen = true;
                     }

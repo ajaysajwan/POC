@@ -1,0 +1,142 @@
+<!--Home.html-->
+<h1>About Chart POC</h1>
+<h3><u>Application Structure</u></h3>
+<p>I have followed the application structure which is described by <b>John Papa</b>
+<a href="https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#application-structure">https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#application-structure</a>
+</p>
+
+<p>In this poc application, I have use chart is for creating a dashboard page. In which I have been displaying booking user data with different data distribution. 
+</p>
+<ul>
+    <li>Polar Area Chart</li>
+    <li>Bar Chart</li>
+    <li>Pie chart</li>
+    <li>Download Chart as an Image</li>
+    <li>Progress Bar(Profit & Loss status)</li>
+</ul>
+
+<p>
+<h4>There are two reusable directive, which i created -</h4>
+<ul>
+    <li>Download Chart as an Image</li>
+    <li>Progress Bar(Profit & Loss status)</li>
+</ul>
+<h4>Download Chart as an Image-</h4>
+<p>Using this directive you can download an image of canvas content.</p>
+
+<h4>Progress Bar(Profit & Loss status)-</h4>
+<p>Using this directive you can create chart like prgress bar. which will display data in percentage</p>
+
+
+
+
+
+<h3><u>Integration Setp</u></h3>
+<h4>Component List-</h4>
+<ul>
+    <li>Polar Area Chart</li>
+    <li>Bar Chart</li>
+    <li>Pie chart</li>
+    <li>Download Chart as an Image</li>
+    <li>Progress Bar(Profit & Loss status)</li>
+</ul>
+<h4>Polar Area Chart, pie char and Bar Chart -</h4>
+<p>I have used  http://carlcraig.github.io/tc-angular-chartjs/ third party library. </p>
+<pre>angular.module( 'app', ['tc.chartjs']);</pre>
+
+<h4>Description-</h4>
+<p>In Polar Area chart – If we click on any area, it will display the bar chart and Progress Bar (Profit & Loss status) as per the clicked area. In a controller, we are calling getBookingDetails service inside click function and creating data objects for bar chart and progress bar chart as per the data required structure and assign.
+Pie chart- I have display pie chat as per the age-group which you can select form drop down.
+Onchange dropdown value, we are calling method  showAgeGroupChart() of controller. In side method, we are calling services and assign data as per the selected age group.
+</p>
+<pre>
+
+Data.Json structure-
+[
+    {
+        "2016": [
+            {
+                "JAN": {
+                    "ageGroup": {
+                        "ageGroup2035": {
+                            "totalBooking": 220
+                        },
+                        "ageGroup3550": {
+                            "totalBooking": 250
+                        },
+                        "ageGroup5070": {
+                            "totalBooking": 323
+                        }
+                    },
+                    "profit": 60,
+                    "mTotalBooking": 793
+                },
+                "FEB": {
+                    "ageGroup": {…..},
+                    "profit": 64,
+                    "mTotalBooking": 1132
+                }
+	“MAR”:{…..},
+	.
+	.	
+	.
+            }
+        ]
+    }
+]
+
+</pre>
+
+
+<h4>Download Chart as an Image-</h4>
+Include AngularJS, directive and bootstrap file
+<pre>
+&lt;<span>link</span> <span>rel</span>=<span class="pl-s"><span>"</span>stylesheet<span>"</span></span> <span>href</span>=<span class="pl-s"><span >"</span>node_modules/bootstrap/dist/css/bootstrap.min.css<span>"</span></span>&gt;&lt;/<span>link</span>&gt;
+&lt;<span>script</span> <span>type</span>=<span class="pl-s"><span>"</span>text/javascript<span>"</span></span> <span>src</span>=<span class="pl-s"><span>"</span>js/angular.js<span>"</span></span>&gt;&lt;/<span>script</span>&gt;
+&lt;<span>script</span> <span>type</span>=<span class="pl-s"><span>"</span>text/javascript<span>"</span></span> <span>src</span>=<span class="pl-s"><span>"</span>js/chart.directive.js<span>"</span></span>&gt;&lt;/<span>script</span>&gt;
+</pre>
+
+<h4>Add download-chart-image directive in html-</h4>
+<pre>
+&lt;<span>download-chart-image</span> class="download-icon" chart-id="canvas1" image-name="booking-count-chart.png"&gt;&lt;/<span>download-chart-image</span>&gt;
+</pre>
+<ul>
+    <li>chart-id- In chart id, assign canvas id which you want to save as an image.</li>
+    <li>image-name- From which name you want to save image.</li>
+</ul>
+
+
+<h4>Progress Bar(Profit & Loss status)-</h4>
+Include AngularJS file, directive and bootstrap
+<pre>
+&lt;<span>script</span> <span>type</span>=<span class="pl-s"><span>"</span>text/javascript<span>"</span></span> <span>src</span>=<span class="pl-s"><span>"</span>js/angular.js<span>"</span></span>&gt;&lt;/<span>script</span>&gt;
+&lt;<span>script</span> <span>type</span>=<span class="pl-s"><span>"</span>text/javascript<span>"</span></span> <span>src</span>=<span class="pl-s"><span>"</span>js/chart.directive.js<span>"</span></span>&gt;&lt;/<span>script</span>&gt;
+</pre>
+
+<p>Add Injector - </p>
+<pre>angular.module( 'app', ['app.directive']); </pre>
+
+Add canvas element in html
+<pre>
+&lt;<span>canvas</span> id="myCanvas" width="210" height="50" canvas-rect options="profitAndLossOptions"&gt;&lt;/<span>canvas</span>&gt;
+&lt;<span>canvas</span> id="tip" width=160 height=25 &gt;&lt;/<span>canvas</span>&gt;
+</pre>
+
+<p>1) options - In options, we need to assign option object. There are some property to  show profit & Loss chart</p>
+<pre>
+width- width of canvas
+height- height of canvas
+increaseBy - At a time % fill on box. Example- 1+1 or 1+10 
+interval - color fill speed in millisecond
+fill - % Fill color by in rectangle box
+fillColor- Fill color code
+borderColor - Border color code 
+  
+$scope.profitAndLossOptions = {
+            width: 200,
+            height: 30,
+            increaseBy: 1,
+            interval: 8
+        }; 
+
+</pre>

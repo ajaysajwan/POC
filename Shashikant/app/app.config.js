@@ -10,13 +10,17 @@ In this module we are define routing for dashboard using ngRoute.
     routeConfig.$inject = ['$routeProvider','$locationProvider'];
 
     function routeConfig($routeProvider,$locationProvider) {
-        $routeProvider.when('/dashboard', {
+        $routeProvider.when('/home', {
+                templateUrl: 'app/home/home.html',
+                controller: 'HomeCtrl'
+            })
+            .when('/dashboard', {
                 templateUrl: 'app/dashboard/dashboard.html',
                 controller: 'DashboardCtrl',
                 controllerAs: 'dashboardAs'
             })
             .otherwise({
-                redirectTo: '/dashboard'
+                redirectTo: '/home'
             });
         // use the HTML5 History API
 //        $locationProvider.html5Mode(true);

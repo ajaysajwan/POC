@@ -2,24 +2,8 @@
 var app = angular.module('myApp', ['ui.router', 'googlechart']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    
-//     ChartJsProvider.setOptions({
-//      colours: ['#FF5252', '#FF8A80'],
-//      responsive: true
-//    });
-//    // Configure all line charts
-//    ChartJsProvider.setOptions('Line', {
-//     // datasetFill: false
-//    });
-//    // Configure all bar charts
-//     ChartJsProvider.setOptions('bar', {
-//      //datasetFill: false,
-//       
-//    });
-    
-    
-    
-    $urlRouterProvider.otherwise('/home');
+
+    $urlRouterProvider.otherwise('/index');
     
     $stateProvider
         .state('home', {
@@ -46,7 +30,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
         // ABOUT PAGE 
        .state('about', {
-            url: '/about',
+            url: '/index',
             templateUrl: 'app/about/about.html',
         
         })

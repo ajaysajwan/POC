@@ -3,6 +3,7 @@
 /*--Angular Google Chart--*/
 app.controller("ChartCtrl", ['$scope', 'chartData', 'googleChartApiPromise', function($scope, chartData, googleChartApiPromise) {
 
+        $scope.chart1 = {};
  
     chartData.getChartData().then(function(data){
         // success function of then

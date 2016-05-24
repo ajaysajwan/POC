@@ -1,0 +1,79 @@
+{
+    "globals": {
+        "shadow": false,
+        "fontFamily": "Verdana",
+        "fontWeight": "100"
+    },
+    "type": "bar",
+    "plot": {
+        "bars-space-left": "5%",
+        "bars-space-right": "5%",
+        "tooltip": {
+            "html-mode": true
+        }
+    },
+    "scale-x": {
+        "labels": [
+            "Alice",
+            "Brett",
+            "Chris",
+            "Donna",
+            "Emily",
+            "Frank"
+        ]
+    },
+    "scale-y": {
+        "values": "0:150:50"
+    },
+    "legend": {
+        "layout": "x5",
+        "position": "0%",
+        "borderColor": "transparent",
+        "marker": {
+            "borderRadius": 10,
+            "borderColor": "transparent"
+        }
+    },
+    "editable": true,
+    "series": [
+        {
+            "values": [
+                64,
+                50,
+                34,
+                30,
+                90,
+                99
+            ],
+            "background-color": "#666699",
+            "text": "A",
+            "data-photo": "<img src='http://www.zingchart.com/images/blackberry.jpg' height='80' width='100'>"
+        },
+        {
+            "values": [
+                70,
+                77,
+                134,
+                114,
+                130,
+                65
+            ],
+            "background-color": "#66ccff",
+            "text": "B",
+            "data-photo": "<img src='http://www.zingchart.com/images/blueberry.jpg' height='80' width='100'>"
+        },
+        {
+            "values": [
+                30,
+                34,
+                15,
+                16,
+                59,
+                64
+            ],
+            "background-color": "#ff9999",
+            "text": "C",
+            "data-photo": "<img src='http://www.zingchart.com/images/cloudberry.jpg' height='80' width='100'>"
+        }
+    ]
+}

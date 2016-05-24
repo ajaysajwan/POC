@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+}
+ul li{
+	list-style-type:none;
+	display:inline;
+}
+xmp{
+	background-color:#CDCDCD;
+	padding:5px;
+}
+.indent{
+	text-indent:30px;
+}
+.header-class{
+	background-color:#0b77c2 !important;	
+}
+.header-class h3{
+	color:#ffffff;
+}

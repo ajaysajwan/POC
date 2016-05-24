@@ -1,0 +1,45 @@
+{
+    "globals": {
+        "shadow": false,
+        "fontFamily": "Verdana",
+        "fontWeight": "100"
+    },
+    "type": "nestedpie",
+    "backgroundColor": "#fff",
+    "tooltip": {
+        "text": "%v requests"
+    },
+    "plot": {
+        "refAngle": "-90",
+        "borderWidth": "0px"
+    },
+    "series": [
+        {
+            "values": [
+                59,
+                55,
+                30,
+                28,
+                15
+            ]
+        },
+        {
+            "values": [
+                60,
+                50,
+                35,
+                30,
+                20
+            ]
+        },
+        {
+            "values": [
+                50,
+                40,
+                30,
+                20,
+                10
+            ]
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+/*
+*style.css
+*This is the use of styling the dashboard page.
+*/
+body > .container {
+    padding: 0px 0px 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.chart-banner {
+    background-color: rgba(0, 140, 186, 0.3);
+    padding-top: 25px;
+    margin-bottom: 15px;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #cccccc;
+}
+
+.tc-chart-js-legend {
+    list-style-type: none;
+    padding: 0px 8px;
+}
+
+.tc-chart-js-legend li {
+    display: block;
+    float: left;
+    /*  clear:both;*/
+    font-size: 10px;
+    padding-left: 3px;
+    margin-bottom: 8px;
+}
+
+.tc-chart-js-legend li span {
+    width: 7px;
+    height: 7px;
+    display: block;
+    margin: 2px;
+    float: left;
+    margin-right: 5px;
+}
+
+.html-view .contaner {
+    padding: 71px 0px 0px 26px;
+    width: 100%;
+    height: 836px;
+    background-image: url('../images/portal.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.barchart {
+    padding-left: 0px;
+    z-index: 99;
+}
+
+#slide {
+    position: absolute;
+    left: -400px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    /** Chrome & Safari **/
+    -moz-transition: all 0.5s ease-in-out;
+    /** Firefox **/
+    -o-transition: all 0.5s ease-in-out;
+    /** Opera **/
+}
+
+#bar-chart,
+#polar-area-chart {
+    background-color: #FCFCFC;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    -ms-box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    margin: 0px 5px;
+    height: 255px;
+}
+
+#move-right {
+    margin: 5px 0px 0px 20px;
+}
+
+#close {
+    position: absolute;
+    right: 0px;
+    margin: 0 20px 0px 0px;
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+}
+
+#close span {
+    cursor: pointer;
+    color: #c3c3c3;
+}
+
+#canvas1 {
+    margin-top: 15px;
+    background-color: #FCFCFC;
+}
+
+#bar-chart-canvas {
+    width: 380px !important;
+    height: 190px !important;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
+    /** Chrome & Safari **/
+    -moz-transition: all 2s ease-in-out;
+    /** Firefox **/
+    -o-transition: all 2s ease-in-out;
+    /** Opera **/
+}
+
+.barchart .bar-legend,
+.pie-legend {
+    font-size: 13px !important;
+}
+
+.form-control {
+    height: 25px;
+    padding: 0px;
+    border-radius: 0px;
+    margin-bottom: 15px;
+    width: 60%;
+    margin-left: 50px;
+}
+
+#polar-area-chart {
+    z-index: 100;
+}
+
+#profit-loss {
+    margin-left: 40px;
+    padding: 10px 43px;
+}
+
+#tip {
+    position: absolute;
+    left: 70px;
+    border-width: 1px;
+    border-color: #555 transparent transparent transparent;
+    border-radius: 2px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    display: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 96px;
+}
+
+.download-icon {
+    position: absolute;
+    top:2px;
+    right: 2px;
+    padding: 2px;
+    z-index: 999;
+}
+
+.user-group {
+    padding-top: 15px;
+}
+
+.user-group .header {
+/*
+    padding-top: 10px;
+    margin-bottom: 5px;
+*/
+}
+.user-group-container{
+    margin-left: 15px;
+}
+
+/*Flip*/
+
+#f1_container {
+    position: relative;
+    width: 391px;
+    height: 255px;
+    margin-left: -15px;
+    z-index: 1;
+}
+
+#f1_container {
+    perspective: 1000;
+}
+
+#f1_card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.6s linear;
+}
+
+/*
+#f1_container:hover #f1_card {
+    transform: rotateY(180deg);
+    box-shadow: 0px 0px 5px #aaa;
+}
+*/
+.rotate-y {
+    transform: rotateY(180deg);
+    box-shadow: 0px 0px 5px #aaa;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: #aaa;
+    z-index: 1000;
+}
+.slide-open{
+    margin-left: 420px
+}
+.slide-close{
+    margin-left: 0px;
+}
+#flip-button{
+    position: absolute;
+    z-index: 1;
+    right: 25px;
+    top:6px;
+/*    z-index: 10000;*/
+    cursor: pointer;
+    color: #c2c2c2;
+    width: 15px;
+    text-align: center;
+}
+#flip-close-button{
+    position: absolute;
+    z-index: 1;
+    right: 6px;
+    top:6px;
+    z-index: 10000;
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 15px;
+    text-align: center;
+}

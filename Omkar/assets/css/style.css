@@ -1,0 +1,30 @@
+div.navbar-collapse.collapse {
+    	display: block;
+    	overflow: hidden;
+    	max-height: 0px;
+    	-webkit-transition: max-height .3s ease;
+    	-moz-transition: max-height .3s ease;
+    	-o-transition: max-height .3s ease;
+    	transition: max-height .3s ease;
+    }
+    div.navbar-collapse.collapse.in {
+    	max-height: 2000px;
+    }
+
+/*--- Angular google Charts : Table Styles ---*/
+.google-visualization-table{
+    width:100%;
+}
+.google-visualization-table-table{
+    width:100%;
+}
+.google-visualization-table-table thead th{
+    background: #dab!important; 
+    padding: 5px;
+    border:1px solid #ccc;
+    
+}
+.google-visualization-table-table tbody td{
+    padding: 5px;
+    border:1px solid #ccc;
+}

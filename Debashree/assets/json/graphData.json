@@ -1,0 +1,177 @@
+[{
+  "key": "Hayyat",
+  "color": "hsl(120,100%,60%)",
+  "veneu": "Delhi",
+  "imgLocation": "../assets/img/hayyat.jpeg",
+  "description": "Hyatt Hotels Corporation is a Chicago-based international owner, operator, and franchiser of hotels, resorts, and vacation properties. The Hyatt Corporation came into being upon purchase of the Hyatt House, at Los Angeles International Airport, on September 27, 1957.Hyatt Hotels Corporation is a Chicago-based international owner, operator, and franchiser of hotels, resorts, and vacation properties. The Hyatt Corporation came into being upon purchase of the Hyatt House, at Los Angeles International Airport, on September 27, 1957.",
+  "revenue": [{
+    "label": "January revenue",
+    "value": 23,
+    "color": "#FFBB78"
+  }, {
+    "label": "February revenue",
+    "value": 36,
+    "color": "#D62728"
+  }, {
+    "label": "March revenue",
+    "value": 48,
+    "color": "#ABD439"
+  }, {
+    "label": "April revenue",
+    "value": 3,
+    "color": "#609EC8"
+  }],
+  "values": [{
+    "x": 0,
+    "y": 230,
+    "label": "JAN"
+  }, {
+    "x": 1,
+    "y": 240,
+    "label": "FEB"
+  }, {
+    "x": 2,
+    "y": 250,
+    "label": "MAR"
+  }, {
+    "x": 3,
+    "y": 260,
+    "label": "APR"
+  }, {
+    "x": 4,
+    "y": 15,
+    "label": "MAY"
+  }]
+}, {
+  "key": "Taj",
+  "color": "hsl(290,60%,60%)",
+  "veneu": "Banglore",
+  "imgLocation": "../assets/img/taj.jpeg",
+  "description": "Indian Hotels Company Limited (IHCL), branded as Taj Group,is a chain of hotels and resorts headquartered at Oxford House in Mumbai,which was incorporated by the founder of the Tata group, Jamsetji Tata, in the year 1903.Indian Hotels Company Limited (IHCL), branded as Taj Group,is a chain of hotels and resorts headquartered at Oxford House in Mumbai,which was incorporated by the founder of the Tata group, Jamsetji Tata, in the year 1903.",
+  "revenue": [{
+    "label": "January revenue",
+    "value": 253,
+    "color": "#FFBB78"
+  }, {
+    "label": "February revenue",
+    "value": 256,
+    "color": "#D62728"
+  }, {
+    "label": "March revenue",
+    "value": 208,
+    "color": "#ABD439"
+  }, {
+    "label": "April revenue",
+    "value": 20,
+    "color": "#609EC8"
+  }],
+  "values": [{
+    "x": 0,
+    "y": 220,
+    "label": "JAN"
+  }, {
+    "x": 1,
+    "y": 210,
+    "label": "FEB"
+  }, {
+    "x": 2,
+    "y": 220,
+    "label": "MAR"
+  }, {
+    "x": 3,
+    "y": 150,
+    "label": "APR"
+  }, {
+    "x": 4,
+    "y": 10,
+    "label": "MAY"
+  }]
+}, {
+  "key": "Marriot",
+  "color": "hsl(220,70%,60%)",
+  "veneu": "Mumbai",
+  "description": "The JW Marriott Hotel Mumbai Juhu is the flagship hotel of the Marriott Group in Mumbai, India.Founded by JW Marriott Jr. and co-owned by Raheja Hospitality The J W Marriott Hotel is located in the Juhu area of Mumbai, overseeing the Juhu Beach.The JW Marriott Hotel Mumbai Juhu is the flagship hotel of the Marriott Group in Mumbai, India.Founded by JW Marriott Jr. and co-owned by Raheja Hospitality The J W Marriott Hotel is located in the Juhu area of Mumbai, overseeing the Juhu Beach.",
+  "imgLocation": "../assets/img/marriot.jpeg",
+  "revenue": [{
+    "label": "January revenue",
+    "value": 13,
+    "color": "#FFBB78"
+  }, {
+    "label": "February revenue",
+    "value": 26,
+    "color": "#D62728"
+  }, {
+    "label": "March revenue",
+    "value": 18,
+    "color": "#ABD439"
+  }, {
+    "label": "April revenue",
+    "value": 3,
+    "color": "#609EC8"
+  }],
+  "values": [{
+    "x": 0,
+    "y": 70,
+    "label": "JAN"
+  }, {
+    "x": 1,
+    "y": 100,
+    "label": "FEB"
+  }, {
+    "x": 2,
+    "y": 190,
+    "label": "MAR"
+  }, {
+    "x": 3,
+    "y": 180,
+    "label": "APR"
+  }, {
+    "x": 4,
+    "y": 30,
+    "label": "MAY"
+  }]
+}, {
+  "key": "Ginger",
+  "color": "hsl(240,20%,60%)",
+  "veneu": "Kolkata",
+  "imgLocation": "../assets/img/ginger.jpeg",
+  "description": "Ginger is an Indian hotel chain, established by Roots Corporation Limited, and part of the Tata Group, a new brand under a category called Smart Basics Hotels. The first hotel was opened in Whitefield, Bangalore in JUN 2004.Ginger is an Indian hotel chain, established by Roots Corporation Limited, and part of the Tata Group, a new brand under a category called Smart Basics Hotels. The first hotel was opened in Whitefield, Bangalore in JUN 2004. ",
+  "revenue": [{
+    "label": "January revenue",
+    "value": 3,
+    "color": "#FFBB78"
+  }, {
+    "label": "February revenue",
+    "value": 16,
+    "color": "#D62728"
+  }, {
+    "label": "March revenue",
+    "value": 18,
+    "color": "#ABD439"
+  }, {
+    "label": "April revenue",
+    "value": 1,
+    "color": "#609EC8"
+  }],
+  "values": [{
+    "x": 0,
+    "y": 240,
+    "label": "JAN"
+  }, {
+    "x": 1,
+    "y": 300,
+    "label": "FEB"
+  }, {
+    "x": 2,
+    "y": 120,
+    "label": "MAR"
+  }, {
+    "x": 3,
+    "y": 270,
+    "label": "APR"
+  }, {
+    "x": 4,
+    "y": 56,
+    "label": "MAY"
+  }]
+}]

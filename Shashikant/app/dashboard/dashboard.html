@@ -1,0 +1,83 @@
+<!--dashboard.html-->
+
+<div class="html-view">
+    <div class="contaner">
+        <div class="row">
+            <div class="col-md-4" id="polar-area-chart">
+                <div id="f1_container">
+                    <div id="f1_card" ng-class="dashboardAs.isFlip ? 'rotate-y' : '' ">
+                        <div class="front face">
+                            <download-chart-image ng-if="!dashboardAs.isFlip" class="download-icon" chart-id="canvas1" image-name="booking-count-chart.png"></download-chart-image>
+                            <span id="flip-button" ng-if="!dashboardAs.isFlip" ng-click="dashboardAs.flip()" class="glyphicon glyphicon-info-sign" aria-hidden="true" tooltip-placement="left" uib-tooltip="Click to view info"></span>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <h6><b>2016 Booking count month wise</b></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" id="chart1">
+                                <div class="col-md-8">
+                                    <canvas id="canvas1" tc-chartjs-polararea chart-options="dashboardAs.options" chart-data="dashboardAs.data" chart-legend="polarareaChart1" chart-click="dashboardAs.chartClick(data)"></canvas>
+                                </div>
+                                <div class="col-md-4">
+                                    <div tc-chartjs-legend chart-legend="polarareaChart1"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="button" class="btn btn-info active btn-sm" ng-click="dashboardAs.updateData()">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back face center">
+                            <span id="flip-close-button" ng-click="dashboardAs.flip()" class="glyphicon glyphicon-remove" aria-hidden="true" tooltip-placement="left" uib-tooltip="Click to view data distribution"></span>
+                            <h3>Information</h3>
+                            <p>This the polar area chart. In which we are displaying total booking count month wise of current year.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 barchart" id="bar-chart">
+                <div id="move-right">                    
+                <download-chart-image ng-if="dashboardAs.isOpen" class="download-icon" chart-id="canvas2" image-name="age-group-wise-data.png"></download-chart-image>
+                    <div id="close" ng-if="dashboardAs.isOpen"><span ng-click="dashboardAs.slideClose();" class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+                    <p ng-if="!dashboardAs.isOpen" class="text-center">Please click on month in poler area chart to view details.</p>
+                    <div ng-if="dashboardAs.isOpen" class="text-center bar-legend" tc-chartjs-legend chart-legend="barChart1"></div>
+                    <div id="slide" ng-class="dashboardAs.isOpen ? 'slide-open' : 'slide-close'">
+                        <canvas id="canvas2" tc-chartjs-bar chart-data="dashboardAs.dataBarChart" chart-options="dashboardAs.barOptions" chart-legend="barChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row user-group">
+            <div class="col-md-3 user-group-container">
+                <h6 class="header text-center"><b>Age Group data distribution of current year</b></h6>
+                <download-chart-image class="download-icon" chart-id="canvas3" image-name="pie-chart.png"></download-chart-image>
+                <div class="text-center">
+                    <select class="form-control" ng-model="dashboardAs.selectedVal" ng-change="dashboardAs.showAgeGroupChart(dashboardAs.selectedVal)">
+                        <option value="">Select age group</option>
+                        <option ng-repeat="opt in dashboardAs.ageGroupOption track by $index" value="{{opt.value}}">{{opt.label}}</option>
+                    </select>
+                    <p ng-if="dashboardAs.selectedVal==''" class="text-center">No Result Found.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">  
+                        <canvas id="canvas3" tc-chartjs-pie chart-data="dashboardAs.dataPieChart" chart-options="dashboardAs.pieChartOptions" chart-legend="pieChart"></canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center pie-legend" tc-chartjs-legend chart-legend="pieChart"></div>
+                    </div>                      
+                </div>
+            </div>
+            <div class="col-md-3" id="profit-loss">
+                <h6 class="text-center"><b>Profit & Loss month wise</b></h6>
+                <p ng-if="!dashboardAs.isOpen" class="text-center ">No Result Found.</p>
+                <div ng-if="dashboardAs.isOpen">
+                    <canvas id="myCanvas" width="210" height="50" canvas-rect options="dashboardAs.profitAndLossOptions"></canvas>
+                    <canvas id="tip" width=160 height=25></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

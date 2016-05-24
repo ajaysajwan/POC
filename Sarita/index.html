@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="">
+<div class="panel panel-info">
+    <div class="panel-heading header-class">
+    <h3>TravelClick</h3>
+    <ul><li><button type="button" class="btn btn-success" onclick="location.href='index.html';">Index</button></li>
+    <li><button type="button" class="btn btn-success" onclick="location.href='Charts/index.html';">Charts</button></li>
+    </ul>
+    </div>
+    <div class="panel-body">
+    <h4><strong>Purpose -</strong></p>
+    <span>Make angular google chart of monthly sales in percentage and their customization.</span>
+    <h4><strong>1) External Libraries used -</strong></h4>
+    <ol>
+    <li><a href="https://www.google.com/jsapi" title="go to link">https://www.google.com/jsapi</a></li>
+    <li><a href="https://github.com/angular-google-chart/angular-google-chart" title="go to link">angular-google-chart.js</a></li>
+    <li><a href="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.js" title="go to link">lib/angular-animate.min.js</a></li>
+    <li><a href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js" title="go to link">js/jquery-min.js</a></li>
+    </ol>    
+    <h4><strong>2) Chart Data</strong></h4>
+    <span>We have an external JSON file which contains the data to show in the chart.</span>
+    <p class="indent"><strong>JSON data format : </strong></p>
+    <xmp>
+    [{
+        "month":"Apr'16",
+        "value1":60,
+        "value2": 10,
+        "value3": 43
+    },
+    {
+    	"month":"May'16",
+        "value1":-61,
+        "value2": 43,
+        "value3": -31
+    }]
+</xmp>
+<span>Google has its own data format to form charts, so we should convert it into google's own format</span>
+<p class="indent"><strong>Google's data format : </strong></p>
+<xmp>“data”:{
+      “cols”: [
+	{
+		“id” : “month”,
+		“label” : “month”,
+		“type” : “number”
+ 	},
+ 	{
+        “id” : “country”,
+        “label” : “country”,
+        “type” : “string”
+    }
+        }],
+    “rows”:[
+    {
+    	“c” :[
+    {
+        “v”: “May”
+    },
+    {
+        “v” : “May”
+    },
+    {
+        “v” : 25
+    }
+    ]
+    “c” : [{. . . . . . . }]
+    }
+]};
+</xmp>
+<h4><strong>3) Controller</strong></h4>
+<span>While getting JSON data through $http request we have to convert it into google data format</span>
+<xmp>
+$http.get('js/data.json').success(function(response){
+		$scope.data = response;
+}
+for(i=0;i<$scope.data.length;i++){
+	chartdata.push([{ c: [{ v: $scope.data[i].month}, {v:$scope.data[i].value1},{v:$scope.data[i].value2},{v:$scope.data[i].value3}]}]);
+}
+$scope.chartData = chartdata; // copy of data into array chartData.
+</xmp>
+<h4><strong>4) Custom Directives</strong></h4>
+<span>Created custom directives of type “EA” for all the charts with isolated scopes.
+Created one constructor of google.visualization.Datatable() inside link function. It represents a two-dimensional, mutable table of values in which each column is assigned a data type, several optional properties including an ID, label, and pattern string.
+</span><p></p>
+<p><code>var data = new google.visualization.DataTable();</code></p>
+<p class="indent">$watch has been added to watch and refresh the chart when data , width , height etc get changed.</p>
+<p><strong>Types of Charts : </strong></p>
+<ol>
+<li>Column Chart</li>
+<li>Pie Chart</li>
+<li>Bar Chart</li>
+<li>Line Chart</li>
+<li>Area Chart</li>
+</ol>
+<h4><strong>5) Animation and Customization</strong></h4>
+<ol>
+<li>Time delay during chart loading</li>
+<li>ease : 'out' - chart gets loaded from slow to fast</li>
+<li>curveType : 'function' in line chart to draw functional chart</li>
+<li>isStacked : true - to make the chart values stacked</li>
+<li>responsive : true - to make the graph responsive</li>
+<li>Custom legend for Piechart - on hover it sets the offset to 0.2</li>
+<li>Bar chart groupWidth : value in % (sets the width of each bar according to % given) </li>
+</ol>
+</div>
+</div>
+</div>
+</body>
+</html>

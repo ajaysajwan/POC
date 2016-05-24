@@ -1,0 +1,32 @@
+{
+  "name": "NVD3-Graph",
+  "version": "1.0.0",
+  "description": "This is a poc application to display NVD3 graph.",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "1.5.3",
+    "angular-route": "1.5.3",
+    "angular-mocks": "1.5.3",
+    "bootstrap": "3.3.6",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "jasmine-core": "^2.4.1",
+    "karma-jasmine": "^0.3.8",
+    "karma-ng-html2js-preprocessor": "~0.1",
+    "karma-coverage": "v0.5.5"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Debashree goswami.",
+  "license": "ISC"
+}

@@ -1,0 +1,109 @@
+/*** page customization **/
+.navbar-inverse {
+    background-color: #008AD4;
+    border-color: #008AD4;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+    color: #fff;
+	background-color:none;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>.active>a{ font-weight:bold; background-color: #fff; color: #417ABD; }
+.footer{ margin-top:50px; }
+.footer img{ max-width:100%; width:100%; }
+.filter{  margin-left: 20px; margin-bottom: 20px; }
+/*** charts **/
+.chart-wrapper{
+	background-color:#F8F8F8;
+    height: 300px;
+	padding-top: 5%;
+    padding-left: 5%;
+    box-shadow: -1px -1px 20px #E0E0E0;
+}
+.bar-chart-wrapper{ height:400px; }
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  /*stroke: #E8E8E8;*/
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+.x.axis text{
+	font-size:12px;
+	text-transform:uppercase;
+}
+.x.axis.price text{
+font-size:18px;
+}
+path.domain{
+	stroke: #B9B8B8;
+}
+.area {
+  fill: steelblue;
+}
+.grid .tick {
+    stroke: #B9B8B8;
+    opacity: 0.7;	
+}
+.grid path {
+      stroke-width: 0;
+}
+
+/** area chart **/
+svg {
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+.line {
+  fill: none;
+  stroke: #E8E8E8;
+  stroke-width: 2px;
+}
+/** area chart ends **/
+
+/** Tool tip ***/
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

@@ -1,0 +1,72 @@
+[{
+		"month":"Jun'15",
+		"value1":60,
+		"value2": 10,
+		"value3": -31
+	},
+	{
+		"month":"July'15",
+		"value1":26,
+		"value2": 30,
+		"value3": -31
+	},
+	{
+		"month":"Aug'15",
+		"value1":40,
+		"value2": 15,
+		"value3": -24
+	},
+	{
+		"month":"Sep'15",
+		"value1":21,
+		"value2": 12,
+		"value3": -15
+	},
+	{
+		"month":"Oct'15",
+		"value1":17,
+		"value2": 45,
+		"value3": 32
+	},
+	{
+		"month":"Nov'15",
+		"value1":43,
+		"value2": 10,
+		"value3": 31
+	},{
+		"month":"Dec'15",
+		"value1": 20,
+		"value2": 34,
+		"value3": -19
+	},
+	{
+		"month":"Jan'16",
+		"value1":40,
+		"value2": 23,
+		"value3": -41
+	},
+	{
+		"month":"Feb'16",
+		"value1":15,
+		"value2": 21,
+		"value3": -24
+	},
+	{
+		"month":"Mar'16",
+		"value1":40,
+		"value2": 30,
+		"value3": 47
+	},
+	{
+		"month":"Apr'16",
+		"value1":25,
+		"value2": 17,
+		"value3": 22
+	},
+	{
+		"month":"May'16",
+		"value1":23,
+		"value2": 35,
+		"value3": 27
+	}
+]

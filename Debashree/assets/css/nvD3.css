@@ -1,0 +1,128 @@
+.chart-type-drop-down {
+    width: 25% ;
+    display: inline-block;
+}
+.float-button {
+    float : right;
+    margin-right: 25px;
+}
+
+#pieGraph svg{
+   height: 350px;
+}
+
+#nvGraph svg {
+    padding:5px
+}
+text.nv-axislabel{
+   fill: black;
+   font-weight: 700;
+ }
+ .nvd3 .nv-axis {
+  fill: grey;
+}
+#pieGraph svg text.nvd3.nv-noData {
+    display:none;
+}
+.hotel-data {
+    padding-left: 3px;
+    padding-right: 3px;
+    color:#777;
+}
+.text-svg {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+.cross-img img {
+    width: 15px;
+    cursor: pointer;
+    float:right;
+            margin-top: -15px;
+}
+.custom-multiselect-dropdown {
+    width: 120px;
+}
+.custom-multiselect-dropdown:focus {
+    outline:none
+}
+
+img {
+    width: 60px;
+    margin-right: 5px;
+    margin-bottom: 5px
+}
+.nav-bar {
+    margin-bottom: 0px;
+}
+.display-inline {
+    display: inline-block;
+}
+.scrollable-menu {
+        top: 34px;
+    left: 16%;
+    padding: 5px;
+}
+
+.section-width {
+    border: 1px solid rgba(0, 0, 0, .25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    background-color: white;
+}
+.table-width {
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.random-data {
+    margin-left: 129px;
+}
+p {
+    color:#777
+}
+a,a:hover {
+    color : #fff;
+    text-decoration: none;
+}
+.align-item {
+    text-align: center;
+}
+.display-initial {
+    display:none;
+}
+.display-after {
+    display:block;
+    margin-top: 25px; 
+}
+
+input[type=text] {
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+}
+.button-align {
+  margin :0 auto;
+  width: 118px;
+}
+
+h5 {
+    color: #777;
+    margin-right: 10px;
+    display:inline-block;
+}
+.abc {
+   color:#777;
+    margin-left:5px;
+    
+}
+.background {
+    background: url("..//img/chart.jpg") no-repeat;
+    background-size: 100%;
+    padding-top:105px;
+    padding-bottom: 10px;
+   
+}
+#pie-chart{
+    margin-top: 60px;
+}

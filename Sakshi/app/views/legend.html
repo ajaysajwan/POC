@@ -1,0 +1,12 @@
+<table ng-show="donutModel" class="legend">
+    <tr>
+        <th>Name</th>
+        <th>Revenue</th>
+        <!--<th>Booking</th>-->
+    </tr>
+    <tr ng-repeat="obj in donutModel" ng-style="{'background-color': obj.data.color}" class="item">
+        <td class="label">{{obj.data.sourceName}}</td>
+        <td><input ng-model="obj.data.revenue" /></td>
+        <!--<td class="label">{{obj.data.bookings}}</td>-->
+    </tr>
+</table>

@@ -1,0 +1,87 @@
+<div ng-controller="mainController">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<h2>Charts Using D3 and Angular</h2>
+			<h3>Implementation Details</h3>
+			<ul>
+				<li>Created following custom directives for different charts:
+					<ul>
+						<li>d3Area</li>
+						<li>d3Line</li>
+						<li>d3TransposeBar</li>
+						<li>d3StackedBar</li>
+					</ul>
+				</li>
+				<li>Main focus is to create <b>Overlapping Area Chart</b> as per provided mock up</li>
+				<li>Prepared data and created json file containging data <b>price vs stock</b> to display chart as per mock up</li>
+				<li>Created controller and services to share data</li>
+				<li>Created factory function for ajax call and retrieving data</li>
+				<li>Using <b>link function</b> inside custom directive created charts</li>
+				<li><h4>Steps to create Area chart</h4>
+					<ul>
+						<li>Define width, height, margin, padding etc for container</li>
+						<li>Create <b>SVG container</b> and set width height etc defined attributes on svg.</li>
+						<li>Append <b>g element</b>	to wrap up all child elements inside <b>SVG</b></li>
+						<li>Create x and y axes using <b>.axis</b> function provided by<b>D3</b></li>
+						<li>Define <b>Domain and Range</b> properties for axes to define min max values and area to plot graph inside.</li>
+						<li>Worked on css to provide design matching mock up e.g. .area, .line classes</li>
+						<li>Created parallel <b>vertical lines</b> as shown in mock up using <b>tick function in d3, defined tick format, tick values etc.</b></li>
+						<li>Displayed min and max date along x axis and positioned date as shown in mock up</li>
+						<li>Using text function in d3 displayed <b>title</b> for graph</li>
+					</ul>
+				</li>
+				<li>Using similar steps and using same data created <b>multi line chart</b> and created circle to display legend e.g. AMZN, MSFT</li>	
+				<li>Using same data displayed <b>transpose bar chart</b> to display individual data for AMZN and MSFT</li>
+				<li>Using same data displayed <b>stacked bart chart</b></li>
+				<li>Created <b>filter by seller</b> options </li>
+				<li>On the basis of user selection worked on data to filter and return data accordingly</li>
+				<li>Worked on updating charts on updating data</li>
+			</ul>
+			<h3>Integration Steps:</h3>
+			<ul>
+				<li>
+					Following scripts are included in index file.
+<xmp><script src="app.js"></script>
+<script src="node_modules/d3/d3.v3.min.js"></script>
+<script src="charts/js/services/commonService.js"></script>
+<script src="charts/js/directives/d3Chart.js"></script>
+<script src="charts/js/mainController.js"></script></xmp> 
+				</li>
+				<li>
+					Directive file : <b>charts/partials/reports.html</b>
+				    These directives are used for different charts - 
+<xmp><d3-area></d3-area>
+<d3-line></d3-line>
+<d3-transpose-bar></d3-transpose-bar>
+<d3-stacked-bar></d3-stacked-bar>
+</xmp>
+				</li>
+				<li>
+					<p>d3Chart.js file contains all custom directives for charts. There are different types of directives are created for Overlapping area chart, Line chart, Bar chart, staked bar chart etc.
+				Directive uses shared scope so Colors and chartData are used in directive and created in controller scope.
+				Path to directive: <b>charts/js/directives/d3Chart.js</b></p>
+				</li>
+				<li>
+					<p>
+					Controller file provides data and other options required to plot chart. It contains function “UpdateChart() which update chart on changing data. Controller calls service to get json data.
+			Path to controller: charts/js/mainController.js
+			We have provide select drop down to filter data. On the basis of selection, UpdateChart() function gets called in controller and on changing data graph updates .
+					</p>
+				</li>
+				<li>
+				<p>Factory is used to get Ajax data. It collects data from json file located at “charts/data/stocks.json” and return data to controller.
+              Path to factory: charts/js/services/commonService.js
+				Sample data format :
+<xmp>[
+{
+"symbol" : "MSFT",
+"date" : "Jan 2014",
+"price" : "16.81"
+}
+]</xmp></p>
+				</li>
+				<li>All Unit test cases are written in Spec folder at root</li>
+			</ul>
+		</div>
+	</div>	
+</div>

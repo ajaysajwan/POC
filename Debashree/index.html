@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="graphApp">
+  <head>
+    <meta charset="utf-8" />
+    <title>NVD3 Graphs</title> 
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="node_modules/nvd3/build/nv.d3.css"/>
+      <link rel="stylesheet" href="../assets/css/nvD3.css"/>
+  </head>
+    
+<body>
+<!-- Navigation -->
+  <nav class="navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header"> <a class="navbar-brand">NVD3 GRAPHS</a> </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#/aboutNVD3">Home</a></li>
+          <li><a href="#/getGraphData">Display Graph</a></li>
+        </ul>
+    </div>
+   </nav>
+
+<div ng-view=""></div>
+
+</body>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="node_modules/d3/d3.js"></script>
+  <script src="node_modules/nvd3/build/nv.d3.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="app/services/d3Factory.js"></script>
+  <script src="app/services/graphDataFactory.js"></script>
+  <script src="app/services/nvFactory.js"></script>
+  <script src="app/services/dropdownDataFactory.js"></script>
+  <script src="app/controllers/graphController.js"></script>
+  <script src="app/directives/multiDropdownDirective.js"></script>
+  <script src="app/directives/graphDirective.js"></script>
+ <script src="app/directives/pieDirective.js"></script>
+</html>

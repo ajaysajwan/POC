@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+body, html {
+    height: 100%;
+}
+
+img {
+    width: 100%;
+   }
+
+donut {
+    position: relative;
+    display: inline-block;
+}
+
+div.tooltip {
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-radius: 1px;
+    background-color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    padding: 5px 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    white-space: nowrap;
+    opacity: 1;
+}
+
+div.container {
+    display: table-row;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+div.container button.live-button {
+    padding: 10px;
+    border: 1px solid #3389C5;
+    border-radius: 3px;
+    color: #0B5588;
+    background: linear-gradient(rgba(0,0,0,0), rgba(51, 137, 197, 0.5));
+    margin-top: 20px;
+}
+
+div.container div.donut-container {
+    float: left;
+    margin-top: 35px;
+    margin-left: 30px;
+    height: 725px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, .25);
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.1));
+    border-radius: 5px;
+}
+
+div.container div.donut-container h2 {
+    margin-top: 10px;
+    padding: 15px;
+    color: #3389C5;
+    font-family: sans-serif;
+}
+
+div.container div.gauge-container {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 35px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.1));
+    border-radius: 5px;
+}
+
+div.container div.gauge-container h2 {
+    margin-top: 25px;
+    color: #3389C5;
+    font-family: sans-serif;
+}
+
+div.container div.bar-chart-container {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 25px;
+    height: 400px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.1));
+    border-radius: 5px;
+}
+
+div.container div.bar-chart-container h2 {
+    color: #3389C5;
+    font-family: sans-serif;
+    margin-top: 25px;
+}
+
+div.container table.legend {
+    position: absolute;
+    top: 183px;
+    left: 188px;
+    /*left: 155px;*/
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+
+div.container table.legend tr{
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    height: 25px;
+}
+div.container table.legend tr th{
+    text-align: center;
+}
+div.container table.legend tr.item:last-of-type {
+    border-bottom: 0;
+}
+
+div.container table.legend tr.item td.label {
+    padding: 10px;
+    font-size: 12px;
+}
+
+div.container table.legend tr.item td input {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.axis path {
+   fill: none;
+   stroke: #000;
+   stroke-opacity: .75;
+}
+
+.chart {
+    margin-left: 15px;
+}

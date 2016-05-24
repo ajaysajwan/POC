@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Donut Chart App</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#cc0101" />
+
+    <!-- Prettification! -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Default.css" />
+    <!-- Scriptalicious! -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="http://rawgit.com/Caged/d3-tip/master/index.js"></script>
+    <script src="app/directives/donutDirective.js"></script>
+    <script src="app/directives/barChartDirective.js"></script>
+    <script src="app/directives/gaugeDirective.js"></script>
+    <script src="app/lib/gauge.js"></script>
+    <script src="app/lib/bar.js"></script>
+    <script src="app/controllers/controller.js"></script>
+    <script src="app/services/donutService.js"></script>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <img src="images/tc-header.jpg">
+        </div>
+    </div>
+   
+
+    <div class="container" ng-app="donutApp" ng-controller="DonutController">
+       <div class="row">
+          <button class="live-button" ng-click="run=!run; clickMe(selectedModel)">Live Demo</button>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="donut-container col-md-12">
+                    <h2>BOOKING PERFORMANCE (USD)</h2>
+                    <donut stroke="'#fff'" width="600" height="600" radius="50" property="'revenue'" colours="donutColours" ng-model="donutModel" mouseclick="onClickSetModel(model)">
+                    </donut>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div ng-if="showModel" class="gauge-container col-md-11">
+                    <div d3-gauge id="test-div" width="300" height="200" min-value="0" max-value="10000" start-color="#DED5D5" end-color="#3389C5" value="demoValue" color="selectedColor"></div>
+                </div>
+
+                <div ng-if="showModel" class="bar-chart-container col-md-11">
+                    <bar-chart height="options.height" data="barChartData" color="selectedColor"></bar-chart>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

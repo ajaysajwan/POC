@@ -1,0 +1,52 @@
+{
+    "type": "line",
+    "title": {
+        "backgroundColor": "transparent",
+        "fontColor": "blue",
+        "text": "TravelClick"
+    },
+    "backgroundColor": "white",
+    "series": [
+        {
+            "values": [
+                1,
+                10,
+                7,
+                4,
+				30,
+				40,
+				4
+            ],
+            "backgroundColor": "#666699"
+        },
+        {
+            "values": [
+                10,
+                11,
+                2,
+                5,
+				20,
+				6,
+				40
+            ],
+            "backgroundColor": "#4DC0CF"
+        }
+    ],
+    "editable": true,
+    "labels": [
+        {
+            "id": "label1",
+            "text": "",
+            "hook": "node:plot=0;index=2",
+            "border-width": 2,
+            "background-color": "black",
+            "color": "white",
+            "callout": 1,
+            "offset-y": "-30%",
+            "visible": false,
+            "font-size": "14px",
+            "padding": "5px"
+        }
+    ]
+    
+}

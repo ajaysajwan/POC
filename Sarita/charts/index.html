@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dashboard</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="js/jquery-min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="https://www.google.com/jsapi"></script>
+<script src="lib/angular-google-chart.js"></script>
+<script src="lib/angular-animate.min.js"></script>
+<script src="js/app.js"></script>
+<script src="directives/bar-chart.js"></script>
+<script src="directives/column-chart.js"></script>
+<script src="directives/line-chart.js"></script>
+<script src="directives/pie-chart.js"></script>
+<script src="directives/area-chart.js"></script>
+<script src="directives/bubble-chart.js"></script>
+</head>
+<body ng-controller="Ctrl">
+<div class="header-class well well-md">
+<h2>TravelClick</h2>
+<!--<ul><li><a href="#">Reservations</a></li>
+<li><a href="#">Content management</a></li>
+<li><a href="#">Business intelligence</a></li>
+<li><a href="#">Digital media</a></li>
+<li><a href="#">Reports</a></li>
+<li><a href="#">Support</a></li></ul>-->
+</div>
+<div class="mainDiv">
+<div class="columnChartClass" ng-show="true">
+<label class="columnChartClassLabel">Change Nature of Chart:</label>
+<select ng-model="myChart">
+	<option value="" selected>please select to change graph</option>
+  <option value="pie">Pie Chart</option>
+  <option value="line">Line Chart</option>
+  <option value="column">Column Chart</option>
+  <option value="bar">Bar Chart</option>
+  <option value="area">Area Chart</option>
+</select>
+
+<div class="container">
+<div class="col-md-6">
+<col-chart data="chartData" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}" select="selectRow(selectedRowIndex)"></col-chart>
+</div>
+
+<div ng-switch="myChart">
+<div ng-switch-when="column">
+<col-chart data="chartData" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}"></col-chart>
+</div>
+<div ng-switch-when="pie">
+<pie-chart data="chartData" class="google-pie-chart" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}"></pie-chart>
+<ul id="legend"></ul>
+</div>
+<div ng-switch-when="line">
+<line-chart data="chartData" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}"></line-chart>
+</div>
+<div ng-switch-when="bar">
+<bar-chart data="chartData" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}"></line-chart>
+</div>
+<div ng-switch-when="area">
+<area-chart data="chartData" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}"></area-chart>
+</div>
+
+</div>
+<div class="chartTabularFormat" ng-show="false">
+<h2>Sales per month</h2> 
+	<table border="1">
+    <tr><th><label>Month</label></th>
+    <th><label>Maximum sale</label></th>
+     <th><label>Minimum sale</label></th>
+     <th><label>Average sale</label></th></tr>
+    <tr ng-repeat="row in chartd" ng-class="rowClass($index)">
+    <td><label>{{row[0]}}</label></td>
+    <td><label>{{row[1]}}</label></td>
+    <td><label>{{row[2]}}</label></td>
+    <td><label>{{row[3]}}</label></td>
+<!--<td><button ng-click="deleteRow($index)" class="btn btn-success" title="delete!">&times;</button></td>
+--></tr>
+   </table>
+</div>
+</div>
+</div> 
+</div>
+</body>
+</html>

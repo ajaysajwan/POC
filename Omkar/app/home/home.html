@@ -1,0 +1,104 @@
+ 
+<div class="container" ng-controller="ChartCtrl">
+        
+   <h3>Home page content</h3>
+
+    <div class="row" >
+
+        
+   <div class="col-md-6">
+       <div class="row form-horizontal">
+            <div class="form-group col-md-12">
+                <label class="control-label col-md-4">Filter By Region: </label>
+                <div class="col-md-4">
+                <select class="form-control" ng-model="myValue" ng-options="v for v in selectOptions" ng-change="filterFun()">
+                 <option value="" disabled>-- Select Region --</option>
+                </select>
+           </div>
+           </div></div>
+            
+            <div class="row">
+             <div google-chart chart="chart2" style="{{chart2.cssStyle}}"> </div>
+            </div>
+
+  </div>
+        
+  <div class="col-md-6">
+        
+         <div google-chart chart="chart1" style="{{chart1.cssStyle}}"> </div>
+      <br>
+    <button ng-click="change('ColumnChart')">ColumnChart</button>
+    <button ng-click="change('BarChart')">BarChart</button>
+    <button ng-click="change('AreaChart')">AreaChart</button>
+    <button ng-click="change('PieChart')">PieChart</button>
+    <button ng-click="change('LineChart')">LineChart</button>
+<!--    <button ng-click="change('CandlestickChart')">CandlestickChart</button>-->
+    <button ng-click="change('SteppedAreaChart')">SteppedAreaChart</button>
+    <button ng-click="change('BubbleChart')">BubbleChart</button>
+    <button ng-click="change('ScatterChart')">ScatterChart</button>
+    <button ng-click="change('Table')">Table</button>
+           
+   </div>
+  
+    </div>
+    <hr>
+     <div class="row" >
+ <div class="col-md-6">
+     <div class="row form-horizontal">
+            <div class="form-group col-md-12">
+                <label class="control-label col-md-4">Filter By Month: </label>
+                <div class="col-md-4">
+                <select class="form-control" ng-model="filterMonth" ng-options="v for v in mapFilterOptions" ng-change="filterMonthFun()">
+                  <option value="" disabled>-- Select Month --</option>
+                </select>
+           </div>
+                <div class="col-md-12"> <strong>Website Visitors Count for the month {{filterMonth}} in 2015</strong> </div>
+           </div></div>
+     
+     
+     
+        <div google-chart chart="chart3" style="{{chart3.cssStyle}}"> </div>
+ </div>
+         
+         
+
+         <div class="col-md-6">
+     <div class="row form-horizontal">
+            <div class="form-group col-md-12">
+                <label class="control-label col-md-4">Filter By Month: </label>
+                <div class="col-md-4">
+                <select class="form-control" ng-model="pieMonthFilter" ng-options="v for v in pieFilterOptions" ng-change="pieFilterFun()">
+                  <option value="" disabled>-- Select Month --</option>
+                </select>
+           </div>
+                 
+           </div></div>
+             
+                  <div class="row form-horizontal">
+            <div class="form-group col-md-12">
+                <label class="control-label col-md-4">Filter By Region: </label>
+                <div class="col-md-4">
+                <select class="form-control" ng-model="pieRegionFilter" ng-options="v for v in pieRegionOptions" ng-change="pieFilterFun()">
+                  <option value="" disabled>-- Select Region --</option>
+                </select>
+           </div>
+                <div class="col-md-12"> <h4>Website Visitors Count from <strong>{{pieRegionFilter}}</strong>, in <strong>{{pieMonthFilter}} </strong>2015</h4> </div>
+           </div></div>
+     
+        <div google-chart chart="chart4" style="{{chart4.cssStyle}}"> </div>
+ </div>
+
+        
+        
+    </div>
+
+    <br><br>
+     <div ui-view="footerHome"> </div>
+    
+   
+    
+</div>
+ 
+	
+	 
+	

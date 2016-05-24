@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controllers\controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controllers/</a> controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.17% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>30/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.5% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>29/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+(function main($angular) {
+&nbsp;
+    $angular.module('donutApp', ['donutDirective', 'barChartDirective', 'gaugeDirective']).controller('DonutController', ['$scope', '$interval', '$timeout', 'DonutService', function DonutController($scope, $interval, $timeout, DonutService) {
+&nbsp;
+        $scope.selectedModel = [];
+        $scope.showModel = false;
+        $scope.selectedColor = 0;
+        //gauge initial value set to be 0
+        $scope.demoValue = 0;
+        //set gauge height and width options
+        $scope.options = {
+            width: 500,
+            height: 300
+        };
+        //set barChart model data
+        $scope.barChartData = [];
+        
+        //getting donut data from service
+        $scope.setValues = function setValues() {
+            
+            DonutService.getDonutModel()
+                .then(function(resp) {
+                    $scope.donutModel = resp.data;
+                    angular.forEach($scope.donutModel, function(source){
+                        source.revenue = 0;
+                        source.bookings = 0;
+                        angular.forEach(source.Region, <span class="fstat-no" title="function not covered" >function(Region){</span>
+<span class="cstat-no" title="statement not covered" >                            source.revenue = source.revenue + Region.revenue;</span>
+<span class="cstat-no" title="statement not covered" >                            source.bookings = source.bookings + Region.bookings;</span>
+                        });      
+                });
+            });
+        };
+        
+        //set an interval on updation of values on click of live data
+        $scope.run = false;
+         $interval(function() {
+             <span class="missing-if-branch" title="else path not taken" >E</span>if (!$scope.run) return;
+<span class="cstat-no" title="statement not covered" >             angular.forEach($scope.donutModel, <span class="fstat-no" title="function not covered" >function(source){</span></span>
+<span class="cstat-no" title="statement not covered" >                 source.revenue = 0;</span>
+<span class="cstat-no" title="statement not covered" >                 source.bookings = 0;</span>
+<span class="cstat-no" title="statement not covered" >                 angular.forEach(source.Region, <span class="fstat-no" title="function not covered" >function(Region){</span></span>
+<span class="cstat-no" title="statement not covered" >                     Region.revenue = Math.floor(Math.random()* (90000 - 10000 + 1)) + 1;</span>
+<span class="cstat-no" title="statement not covered" >                     source.revenue = source.revenue + Region.revenue;</span>
+<span class="cstat-no" title="statement not covered" >                     Region.bookings = Math.floor(Math.random() * (500 - 1 + 1)) + 1;</span>
+<span class="cstat-no" title="statement not covered" >                     source.bookings = source.bookings + Region.bookings;</span>
+                 });   
+<span class="cstat-no" title="statement not covered" >                 $scope.demoValue = source.bookings;</span>
+             }) 
+         },2000);
+                         
+                         
+         
+        //set the selected model on click of donut chart selections for other charts
+        $scope.onClickSetModel = function onClickSetModel(model) {
+            $scope.selectedModel = model;
+            if ($scope.selectedModel) {
+                $scope.barChartData = $scope.selectedModel.Region;
+                $scope.demoValue = $scope.selectedModel.bookings;
+                $scope.selectedColor = $scope.selectedModel.color;
+                $scope.showModel = true;
+            } else {
+                $scope.showModel = false;
+            }
+        };
+&nbsp;
+        //dount model property
+        $scope.donutModel = [];
+&nbsp;
+        $timeout(function timeout() {
+&nbsp;
+            // Initialise after a second to simulate an AJAX request.
+            $scope.setValues();
+&nbsp;
+        }, 1000);
+&nbsp;
+        //setting the donut colors from controller
+        // $scope.donutColours = ['red', 'green', 'blue', 'yellow', 'orange'];
+&nbsp;
+    }])
+&nbsp;
+})(window.angular);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 19 2016 19:17:24 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

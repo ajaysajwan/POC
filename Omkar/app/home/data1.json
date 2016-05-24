@@ -1,0 +1,98 @@
+[
+  {
+    "month": "January",
+    "america": {"total":122, "usa":50, "canada":15, "brazil":9, "argentina":1, "mexico":13, "other":12},
+    "europe": {"total":150, "uk":55, "france":5, "italy":5, "spain":3, "germany":10, "netherland":10, "other":22}, 
+    "asia": {"total":131, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":12, "nigeria":55, "egypt":5, "south africa":5, "kenya":3, "other":22},
+    "oceania": {"total":20, "australia":55, "new zealand":5, "other":22}
+  },
+  {
+    "month": "February",
+    "america": {"total":124, "usa":45, "canada":25, "brazil":19, "argentina":11, "mexico":15, "other":22},
+    "europe": {"total":150, "uk":25, "france":25, "italy":52, "spain":32, "germany":44, "netherland":9, "other":2},
+    "asia": {"total":135, "india":55, "hongkong":5, "japan":5, "china":3, "uae":10, "other":22},
+    "africa": {"total":41, "nigeria":12, "egypt":3, "south africa":15, "kenya":13, "other":4},
+    "oceania": {"total":125, "australia":42, "new zealand":40, "other":2}
+  },
+    {
+    "month": "March",
+    "america": {"total":79, "usa":28, "canada":45, "brazil":7, "argentina":21, "mexico":3, "other":9},
+    "europe": {"total":118, "uk":14, "france":55, "italy":5, "spain":3, "germany":10, "netherland":18, "other":32},  
+    "asia": {"total":99, "india":37, "hongkong":8, "japan":3, "china":2, "uae":15, "other":15},
+    "africa": {"total":60, "nigeria":24, "egypt":12, "south africa":7, "kenya":5, "other":9},
+    "oceania": {"total":100, "australia":51, "new zealand":45, "other":11}
+  },
+    {
+    "month": "April",
+    "america": {"total":94, "usa":33, "canada":29, "brazil":21, "argentina":17, "mexico":9, "other":20},
+    "europe": {"total":133, "uk":19, "france":45, "italy":54, "spain":34, "germany":40, "netherland":14, "other":42},  
+    "asia": {"total":115, "india":44, "hongkong":4, "japan":7, "china":2, "uae":23, "other":20},
+    "africa": {"total":67, "nigeria":24, "egypt":11, "south africa":22, "kenya":11, "other":7},
+    "oceania": {"total":22, "australia":51, "new zealand":35, "other":4}
+  },
+    {
+    "month": "May",
+    "america": {"total":131, "usa":20, "canada":13, "brazil":11, "argentina":24, "mexico":23, "other":27},
+    "europe": {"total":111, "uk":15, "france":15, "italy":15, "spain":13, "germany":11, "netherland":17, "other":11},  
+    "asia": {"total":85, "india":30, "hongkong":15, "japan":15, "china":10, "uae":16, "other":14},
+    "africa": {"total":78, "nigeria":45, "egypt":25, "south africa":25, "kenya":13, "other":12},
+    "oceania": {"total":115, "australia":15, "new zealand":45, "other":32}
+  },
+    {
+    "month": "June",
+    "america": {"total":77, "usa":42, "canada":35, "brazil":29, "argentina":5, "mexico":6, "other":12},
+    "europe": {"total":123, "uk":18, "france":10, "italy":5, "spain":20, "germany":30, "netherland":20, "other":20},  
+   "asia": {"total":144, "india":50, "hongkong":15, "japan":9, "china":1, "uae":13, "other":12},
+    "africa": {"total":99, "nigeria":25, "egypt":25, "south africa":22, "kenya":11, "other":3},
+    "oceania": {"total":48, "australia":35, "new zealand":35, "other":5}
+  },
+    {
+    "month": "July",
+    "america": {"total":104, "usa":11, "canada":12, "brazil":49, "argentina":41, "mexico":4, "other":5},
+    "europe": {"total":66, "uk":35, "france":14, "italy":45, "spain":22, "germany":12, "netherland":10, "other":12},  
+    "asia": {"total":78, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":101, "nigeria":36, "egypt":16, "south africa":25, "kenya":21, "other":24},
+    "oceania": {"total":125, "australia":22, "new zealand":54, "other":27}
+  },
+    {
+    "month": "August",
+    "america": {"total":117, "usa":51, "canada":35, "brazil":31, "argentina":21, "mexico":23, "other":43},
+    "europe": {"total":137, "uk":50, "france":22, "italy":15, "spain":43, "germany":10, "netherland":10, "other":9},  
+    "asia": {"total":65, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":19, "nigeria":17, "egypt":15, "south africa":51, "kenya":13, "other":12},
+    "oceania": {"total":111, "australia":25, "new zealand":35, "other":29}
+  },
+    {
+    "month": "September",
+    "america": {"total":80, "usa":30, "canada":5, "brazil":45, "argentina":23, "mexico":13, "other":5},
+    "europe": {"total":90, "uk":29, "france":49, "italy":27, "spain":9, "germany":31, "netherland":8, "other":6},  
+    "asia": {"total":120, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":45, "nigeria":19, "egypt":35, "south africa":15, "kenya":8, "other":32},
+    "oceania": {"total":101, "australia":56, "new zealand":15, "other":12}
+  },
+    {
+    "month": "October",
+    "america": {"total":123, "usa":17, "canada":15, "brazil":36, "argentina":19, "mexico":19, "other":9},
+    "europe": {"total":147, "uk":45, "france":10, "italy":22, "spain":14, "germany":17, "netherland":22, "other":30},  
+    "asia": {"total":149, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":110, "nigeria":25, "egypt":26, "south africa":37, "kenya":33, "other":23},
+    "oceania": {"total":102, "australia":59, "new zealand":19, "other":22}
+  },
+    {
+    "month": "November",
+    "america": {"total":142, "usa":55, "canada":36, "brazil":4, "argentina":37, "mexico":34, "other":22},
+    "europe": {"total":144, "uk":35, "france":45, "italy":4, "spain":5, "germany":58, "netherland":15, "other":21},  
+    "asia": {"total":151, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":128, "nigeria":12, "egypt":26, "south africa":27, "kenya":3, "other":42},
+    "oceania": {"total":121, "australia":33, "new zealand":45, "other":9}
+  },
+    {
+    "month": "December",
+    "america": {"total":155, "usa":47, "canada":44, "brazil":39, "argentina":16, "mexico":5, "other":2},
+    "europe": {"total":150, "uk":25, "france":15, "italy":7, "spain":8, "germany":40, "netherland":10, "other":10},  
+    "asia": {"total":159, "india":42, "hongkong":8, "japan":2, "china":2, "uae":20, "other":26},
+    "africa": {"total":119, "nigeria":57, "egypt":28, "south africa":44, "kenya":8, "other":9}, 
+    "oceania": {"total":139, "australia":47, "new zealand":35, "other":18}
+  }
+]

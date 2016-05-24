@@ -1,53 +1,160 @@
-<html>
-   <head>
-      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" ></script>
-      <script src = "assets/lib/zingchart.min.js" ></script>
-      <script src = "directives/zingchart-angularjs.js" ></script>
-      <script src = "controllers/script.js" ></script>
-      <script src = "services/jsonCall.js" ></script>
-      
-      <link rel="stylesheet" href="assets/css/style.css">
-   </head>
-   <body ng-app="chartDemo">
-      <div ng-controller="MainController">
-      <header ><h1>Chart Demo</h1></header>
-      <div class="container">
-         <div class="chartDiv">
-            <!--piechart-->
-            Select type:  <button ng-click="changeType(myJson,'bar');">bar</button>
-            <button ng-click="changeType(myJson,'nestedpie');">pie</button>
-            <div zingchart id="chart-1" zc-json="myJson" zc-width="100%" zc-height="428px"></div>
-         </div>
-         <div class="chartDiv">
-         
-                <button ng-click="changeAxis(myJson2);">change axis</button>
-            <!--bar chart Azis change-->
-            <div zingchart id="chart-2" zc-json="myJson2" zc-width="100%" zc-height="428px"></div>
-           
-         </div>
-         <div  class="chartDiv">
-         <div id="controls">     
-         <label>Select a node and change its value : </label>         
-               <input  ng-model="appendedValue"></input>
-               <section>
-                  <button ng-click="changeNodeValue(myJson3)"> append </button>
-               </section>
-            </div>
-            <!--bar chart value update-->
-            <div zingchart id="chart-3" zc-editable="true" zc-json="myJson3" zc-width="100%" zc-height="428px"></div>
-            
-            </div>
-            
-            <!--Mobile Barchart-->
-            <div class="chartDiv">
-             <div zingchart id="chart-4" zc-mobile="true" zc-editable="true" zc-json="myJson4" zc-width="100%" zc-height="428px"></div>
-            </div>
-            <!--Mobile Barchart-->
-            <div class="chartDiv chartDiv1">
-             <div zingchart id="chart-5" zc-mobile="true" zc-editable="true" zc-json="myJson5" zc-width="100%" zc-height="428px"></div>
-            </div>
-         </div>
-      </div>
-      </div>
-   </body>
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <style>
+      body{
+      font-size:18px;
+      }
+	  ol>li{
+		font-size:20px;  
+	  }
+	  ul>li{
+		 	font-size:18px; 
+			padding:5px;  
+	  }
+	   ol>li>span{    width: 96%;
+    display: inline-block;
+    margin: 2%;
+    background-color: #DFDEDE;
+	   }
+   </style>
+</head>
+<body>
+   <header >
+      <h1>Chart Demo(ZingCharts)</h1>
+   </header>
+   <button onclick="document.location.href='zingChart.html';">Demo</button>
+   <ol>
+      <li >
+         <span class="bold">Zing Chart POC details:</span>
+         <ul>
+            <li>Zing chart library is used. There are options to create bar, line pie etc.It have angular already created angular directive</li>
+         </ul>
+      </li>
+       </br>
+      <li>
+         <span class="bold">Zingchart-angularjs directive Details:</span>
+         <ul>
+            <li>
+               zingchart-angularjs: zingchart-angularjs  is a Zing Chart angular directive which can be used directly in HTML as a attribute to implement Zing chart.</br>
+               <ul>
+                  <span class="bold">Other attributed required:</span>
+                  <li><span class="bold">Id:</span> Unique Identifier for your chart</li>
+                  <li><span class="bold">ZC-JSON:</span>Json Data that will be passed to Zingchart library from directive</li>
+                  <li><span class="bold">ZC-height and zc-width:</span> optional parameter to set height and width to chart element</li>
+                  <li><span class="bold">zc-editable:</span> To make graph editable at run time</li>
+                  <li><span class="bold">Zc-mobile:</span> It will divide a graph in to shared graph if screen is small otherwise for desktop it will show as normal graph on same axis</li>
+               </ul>
+            </li>
+         </ul>
+      </li>
+      </br>
+      <li>
+      <span class="bold">Customized functionality:</span>
+      <ul>
+            <li>
+            <span class="bold">Change in chart type:</span>A pie chart can be converted into bar chart or vice versa according to user need. 
+            </li>
+            <li>
+            <span class="bold">Change in Axis:</span>We can convert horizontal chart to vertical one opr vise versa
+            </li>
+            <li>
+            <span class="bold">Change the value of perticular node at run time:</span>Click on any node, and enter the new value in the text box. we can change its value at run time.
+            </li>
+            <li>
+            <span class="bold">Mobile View:</span>If screen size is greater than 900 then graph can be seen with on different axis else for desktop it will be  on same axis.
+            </li>
+      </ul>
+      </li>
+      </br>
+      <li>
+      <span class="bold">Customized Code:</span>
+      <ul>
+            <li>
+            <span class="bold">ShowChart(_json,$scope):</span>	Show chart will be triggered if ZC-mobile attribute is present.
+Check screen size and call chart render from zingchart library according to screen size.
+            </li>
+            <li>
+            <span class="bold">nodeClick (node,scope):</span>	Check currently clicked node.
+Get clicked node and update seriesSelected and valueSelected values
+
+            </li>
+            <li>
+            <span class="bold">JSON service to call JSON data:</span>•	Hit  json service to call json data and save it in variable 
+            </li>
+            <li>
+            <span class="bold">changeNodeValue (JSON):</span>	update node value.
+Get seriesSelected and valueSelected and update value of that node
+
+            </li>
+            <li>
+            <span class="bold">changeAxis (JSON):</span>switch x and y axis. 
+            </li>
+      </ul>
+      </li>
+      </br>
+      <li>
+      <span class="bold">Integration Steps:</span>
+      <ul>
+            <li>
+            <span class="bold">Files to be included:</span>	
+            <ul>
+            <li>
+            <span class="bold">Angular Library:</span> https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js
+            </li>
+            <li>
+            <span class="bold">zingchart  library:</span> assets/lib/zingchart.min.js
+            </li>
+            <li>
+            <span class="bold">directives :</span>directives/zingchart-angularjs.js
+            </li>
+            <li>
+            <span class="bold">controller:</span> controllers/script.js
+            </li>
+            <li>
+            <span class="bold">services : </span>services/jsonCall.js
+            </li>
+            </ul>            
+            <li>
+            <span class="bold">add a directive in your HTML page:</span></br>
+            &lt;div zingchart id=&quot;chart-1&quot; zc-json=&quot;myJson&quot; zc-width=&quot;100%&quot; zc-height=&quot;568px&quot;&gt;&lt;/div&gt;
+            </li>
+            <li>
+            <span class="bold">JSON service to call JSON data:</span>•	Hit  json service to call json data and save it in variable 
+            </li>
+            <li>
+            <span class="bold">Define JSON data:</span>	{  </br>
+   "type":"line",</br>
+   "backgroundColor":"white",</br>
+   "series":[  </br>
+      {  </br>
+         "values":[  </br>
+            1,
+            10,
+            7,
+            4,
+            30,
+            40,
+            4
+         ],</br>
+      },</br>
+      ]</br>
+}</br>
+
+
+            </li>
+            <li>
+            <span class="bold">To perform Action on your chart include these buttons:</span></br>
+&lt;button ng-click=&quot;changeAxis(jsondata);&quot;&gt;change axis&lt;/button&gt;</br>
+
+&lt;button ng-click=&quot;changeNodeValue(jsondata)&quot;&gt; append &lt;/button&gt;
+            </li>
+            <li><span class="bold">Mobile Chart :</span>If you want to make your chart mobile friendly  add zc-mobile="true" attribute
+            </li>
+      </ul>
+      </li>
+   </ol>
+   <button onclick="document.location.href='zingChart.html';">Demo</button>
+</body>
 </html>

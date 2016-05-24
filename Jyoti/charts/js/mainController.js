@@ -14,8 +14,7 @@ mainApp.controller('mainController',['$scope','$http','chartFactory',function($s
 		symbols = d3.nest()
 		.key(function(d) { return d.symbol; })
 		.entries(stocks = data);
-		// Parse dates and numbers. We assume values are sorted by date.
-		// Also compute the maximum price per symbol, needed for the y-domain.
+		
 		symbols.forEach(function(s) {
 			s.values.forEach(function(d) { d.date = parse(d.date); d.price = +d.price; });
 			s.maxPrice = d3.max(s.values, function(d) { return d.price; });
@@ -44,8 +43,7 @@ mainApp.controller('mainController',['$scope','$http','chartFactory',function($s
 		symbols = d3.nest()
 		.key(function(d) { return d.symbol; })
 		.entries(stocks = data);
-		// Parse dates and numbers. We assume values are sorted by date.
-		// Also compute the maximum price per symbol, needed for the y-domain.
+		
 		symbols.forEach(function(s) {
 			s.values.forEach(function(d) { d.price = +d.price; });
 			s.maxPrice = d3.max(s.values, function(d) { return d.price; });

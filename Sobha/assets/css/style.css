@@ -20,6 +20,9 @@
  .container {
      margin: 0px auto;
  }
+ .bold{
+	font-weight:bold; 
+ }
  .chartDiv {
      display: inline-block;
      width: 45%;

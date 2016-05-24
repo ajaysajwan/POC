@@ -130,6 +130,35 @@
 							});
 							nodeClick(p, $scope);
 						});
+						zingchart.resize = function(p) {
+var graphWidth = document.getElementById(json.id).offsetWidth ;
+		//checkfor multi Series
+		 if(graphWidth <= 900) {
+		var series = json.data.series;
+		if (Array.isArray(series)) {
+			var JSONArr = new Array();
+			
+			for (var i = 0; i < series.length; i++) {
+				var newSeries=[];
+				 newSeries.push( series[i]);
+				var newObj = cloneJson(json.data);
+				newObj.series = newSeries;
+				newObj.title = {"text":"Mobile View"};
+				JSONArr.push(newObj);
+				
+			}
+			var myData = {
+				'id': json.id,
+				'data': {
+					'graphset': JSONArr
+				},
+				'height': json.height,
+				'width': json.width
+			};
+			json.data=myData.data;
+		}
+		 }
+}
 						// Hides callout label when click is not on a node
 						zingchart.bind(_json.id, "click", function(p) {
 							if (p.target != 'node') {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" ></script>
+      <script src = "assets/lib/zingchart.min.js" ></script>
+      <script src = "directives/zingchart-angularjs.js" ></script>
+      <script src = "controllers/script.js" ></script>
+      <script src = "services/jsonCall.js" ></script>
+      
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body ng-app="chartDemo">
+      <div ng-controller="MainController">
+      <header ><h1>Chart Demo</h1></header>
+      <div class="container">
+         <div class="chartDiv">
+            <!--piechart-->
+            Select type:  <button ng-click="changeType(myJson,'bar');">bar</button>
+            <button ng-click="changeType(myJson,'nestedpie');">pie</button>
+            <div zingchart id="chart-1" zc-json="myJson" zc-width="100%" zc-height="428px"></div>
+         </div>
+         <div class="chartDiv">
+         
+                <button ng-click="changeAxis(myJson2);">change axis</button>
+            <!--bar chart Azis change-->
+            <div zingchart id="chart-2" zc-json="myJson2" zc-width="100%" zc-height="428px"></div>
+           
+         </div>
+         <div  class="chartDiv">
+         <div id="controls">     
+         <label>Select a node and change its value : </label>         
+               <input  ng-model="appendedValue"></input>
+               <section>
+                  <button ng-click="changeNodeValue(myJson3)"> append </button>
+               </section>
+            </div>
+            <!--bar chart value update-->
+            <div zingchart id="chart-3" zc-editable="true" zc-json="myJson3" zc-width="100%" zc-height="428px"></div>
+            
+            </div>
+            
+            <!--Mobile Barchart-->
+            <div class="chartDiv">
+             <div zingchart id="chart-4" zc-mobile="true" zc-editable="true" zc-json="myJson4" zc-width="100%" zc-height="428px"></div>
+            </div>
+            <!--Mobile Barchart-->
+            <div class="chartDiv chartDiv1">
+             <div zingchart id="chart-5" zc-mobile="true" zc-editable="true" zc-json="myJson5" zc-width="100%" zc-height="428px"></div>
+            </div>
+         </div>
+      </div>
+      </div>
+   </body>
+</html>

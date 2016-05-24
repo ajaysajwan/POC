@@ -1,7 +1,7 @@
 <div ng-controller="mainController">
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12">
-			<h2>Charts Using D3 and Angular</h2>
+			<h2>Angular D3 Charts</h2>
 			<h3>Implementation Details</h3>
 			<ul>
 				<li>Created following custom directives for different charts:
@@ -40,20 +40,24 @@
 			<h3>Integration Steps:</h3>
 			<ul>
 				<li>
-					Following scripts are included in index file.
-<xmp><script src="app.js"></script>
-<script src="node_modules/d3/d3.v3.min.js"></script>
-<script src="charts/js/services/commonService.js"></script>
-<script src="charts/js/directives/d3Chart.js"></script>
-<script src="charts/js/mainController.js"></script></xmp> 
+					<strong>Following scripts are included in index file.</strong>
+                    <div><strong>D3 JS Library file: </strong><xmp><script src="node_modules/d3/d3.v3.min.js"></script></xmp></div>
+                    <div><strong>Service to get chart data: </strong> <xmp><script src="charts/js/services/commonService.js"></script></xmp></div>
+                    <div><strong>Directive files for different charts : </strong>
+<xmp><script src="charts/js/directives/d3AreaChart.js"></script>
+<script src="charts/js/directives/d3LineChart.js"></script>
+<script src="charts/js/directives/d3BarChart.js"></script>
+</xmp>
+                    </div>
+                    <div><strong>Controller file :</strong><xmp><script src="charts/js/mainController.js"></script></xmp></div>
 				</li>
 				<li>
-					Directive file : <b>charts/partials/reports.html</b>
+					<strong>Template file for Directives </strong> : <b>charts/partials/reports.html</b>
 				    These directives are used for different charts - 
-<xmp><d3-area></d3-area>
-<d3-line></d3-line>
-<d3-transpose-bar></d3-transpose-bar>
-<d3-stacked-bar></d3-stacked-bar>
+<xmp><d3-area symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-area>
+<d3-line symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-line>
+<d3-transpose-bar symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-transpose-bar>
+<d3-stacked-bar symbols="symbols" chartData="chartData" colors="colors" opacity="opacity"></d3-stacked-bar>
 </xmp>
 				</li>
 				<li>
